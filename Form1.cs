@@ -16,5 +16,10 @@ namespace FInal_Project
         {
             InitializeComponent();
         }
+
+        private void RegisterLabel_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Salut");
+        }
     }
 }
