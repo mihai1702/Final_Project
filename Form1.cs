@@ -22,7 +22,8 @@ namespace FInal_Project
 
         private void RegisterLabel_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Salut");
+            RegisterForm registerForm = new RegisterForm();
+            registerForm.Show();
         }
 
         private void ChooseLanguageBox_SelectedIndexChanged(object sender, EventArgs e)
@@ -35,6 +36,11 @@ namespace FInal_Project
             PasswordLabel.Text = Languages.Strings.PasswordLabel;
             InfoRegLabel.Text = Languages.Strings.InfoRegLabel;
             RegisterLabel.Text = Languages.Strings.RegisterLabel;
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

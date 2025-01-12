@@ -28,5 +28,6 @@ namespace FInal_Project
         {
         }
         public DbSet<Product> Products { get; set; }
+        public DbSet<Account> Accounts { get; set; }
     }
 }
