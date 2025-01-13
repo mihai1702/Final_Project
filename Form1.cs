@@ -18,8 +18,6 @@ namespace FInal_Project
         public Form1()
         {
             InitializeComponent();
-            ManageProductsForm manageProducts=new ManageProductsForm();
-            manageProducts.Show();
         }
 
         private void RegisterLabel_Click(object sender, EventArgs e)
