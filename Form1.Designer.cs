@@ -67,6 +67,7 @@
             // 
             this.PasswordTextBox.Location = new System.Drawing.Point(351, 198);
             this.PasswordTextBox.Name = "PasswordTextBox";
+            this.PasswordTextBox.PasswordChar = '*';
             this.PasswordTextBox.Size = new System.Drawing.Size(184, 31);
             this.PasswordTextBox.TabIndex = 3;
             // 
@@ -78,6 +79,7 @@
             this.LogInButton.TabIndex = 4;
             this.LogInButton.Text = "Login";
             this.LogInButton.UseVisualStyleBackColor = true;
+            this.LogInButton.Click += new System.EventHandler(this.LogInButton_Click);
             // 
             // InfoRegLabel
             // 

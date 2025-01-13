@@ -111,7 +111,7 @@
             // 
             this.Password_maskedTxt.Location = new System.Drawing.Point(168, 266);
             this.Password_maskedTxt.Name = "Password_maskedTxt";
-            this.Password_maskedTxt.PromptChar = '*';
+            this.Password_maskedTxt.PasswordChar = '*';
             this.Password_maskedTxt.Size = new System.Drawing.Size(407, 31);
             this.Password_maskedTxt.TabIndex = 8;
             // 
@@ -119,6 +119,7 @@
             // 
             this.ConfirmPassword_maskedTxt.Location = new System.Drawing.Point(238, 347);
             this.ConfirmPassword_maskedTxt.Name = "ConfirmPassword_maskedTxt";
+            this.ConfirmPassword_maskedTxt.PasswordChar = '*';
             this.ConfirmPassword_maskedTxt.Size = new System.Drawing.Size(337, 31);
             this.ConfirmPassword_maskedTxt.TabIndex = 9;
             // 
