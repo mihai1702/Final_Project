@@ -29,12 +29,6 @@
         private void InitializeComponent()
         {
             this.ProductsGrid = new System.Windows.Forms.DataGridView();
-            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
-            this.meniuToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.adaugareProdusToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.produsNouToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.produsExistentToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.istoricVanzariToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.IDProductColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ProductColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ProductDescription = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -42,8 +36,16 @@
             this.ExpDateColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.StockColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.PriceColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.meniuToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.adaugareProdusToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.produsNouToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.produsExistentToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.istoricVanzariToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.SearchProductBox = new System.Windows.Forms.TextBox();
             this.SearchProductButton = new System.Windows.Forms.Button();
+            this.RefreshButton = new System.Windows.Forms.Button();
+            this.CategoryComboBox = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.ProductsGrid)).BeginInit();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -66,54 +68,6 @@
             this.ProductsGrid.Size = new System.Drawing.Size(771, 242);
             this.ProductsGrid.TabIndex = 0;
             this.ProductsGrid.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.ProductsGrid_CellContentClick);
-            // 
-            // menuStrip1
-            // 
-            this.menuStrip1.GripMargin = new System.Windows.Forms.Padding(2, 2, 0, 2);
-            this.menuStrip1.ImageScalingSize = new System.Drawing.Size(32, 32);
-            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.meniuToolStripMenuItem});
-            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
-            this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(1186, 40);
-            this.menuStrip1.TabIndex = 1;
-            this.menuStrip1.Text = "menuStrip1";
-            // 
-            // meniuToolStripMenuItem
-            // 
-            this.meniuToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.adaugareProdusToolStripMenuItem,
-            this.istoricVanzariToolStripMenuItem});
-            this.meniuToolStripMenuItem.Name = "meniuToolStripMenuItem";
-            this.meniuToolStripMenuItem.Size = new System.Drawing.Size(103, 36);
-            this.meniuToolStripMenuItem.Text = "Meniu";
-            // 
-            // adaugareProdusToolStripMenuItem
-            // 
-            this.adaugareProdusToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.produsNouToolStripMenuItem,
-            this.produsExistentToolStripMenuItem});
-            this.adaugareProdusToolStripMenuItem.Name = "adaugareProdusToolStripMenuItem";
-            this.adaugareProdusToolStripMenuItem.Size = new System.Drawing.Size(359, 44);
-            this.adaugareProdusToolStripMenuItem.Text = "Adaugare Produs";
-            // 
-            // produsNouToolStripMenuItem
-            // 
-            this.produsNouToolStripMenuItem.Name = "produsNouToolStripMenuItem";
-            this.produsNouToolStripMenuItem.Size = new System.Drawing.Size(359, 44);
-            this.produsNouToolStripMenuItem.Text = "Produs Nou";
-            // 
-            // produsExistentToolStripMenuItem
-            // 
-            this.produsExistentToolStripMenuItem.Name = "produsExistentToolStripMenuItem";
-            this.produsExistentToolStripMenuItem.Size = new System.Drawing.Size(359, 44);
-            this.produsExistentToolStripMenuItem.Text = "Produs Existent";
-            // 
-            // istoricVanzariToolStripMenuItem
-            // 
-            this.istoricVanzariToolStripMenuItem.Name = "istoricVanzariToolStripMenuItem";
-            this.istoricVanzariToolStripMenuItem.Size = new System.Drawing.Size(359, 44);
-            this.istoricVanzariToolStripMenuItem.Text = "Istoric Vanzari";
             // 
             // IDProductColumn
             // 
@@ -171,6 +125,54 @@
             this.PriceColumn.ReadOnly = true;
             this.PriceColumn.Width = 200;
             // 
+            // menuStrip1
+            // 
+            this.menuStrip1.GripMargin = new System.Windows.Forms.Padding(2, 2, 0, 2);
+            this.menuStrip1.ImageScalingSize = new System.Drawing.Size(32, 32);
+            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.meniuToolStripMenuItem});
+            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
+            this.menuStrip1.Name = "menuStrip1";
+            this.menuStrip1.Size = new System.Drawing.Size(1186, 40);
+            this.menuStrip1.TabIndex = 1;
+            this.menuStrip1.Text = "menuStrip1";
+            // 
+            // meniuToolStripMenuItem
+            // 
+            this.meniuToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.adaugareProdusToolStripMenuItem,
+            this.istoricVanzariToolStripMenuItem});
+            this.meniuToolStripMenuItem.Name = "meniuToolStripMenuItem";
+            this.meniuToolStripMenuItem.Size = new System.Drawing.Size(103, 36);
+            this.meniuToolStripMenuItem.Text = "Meniu";
+            // 
+            // adaugareProdusToolStripMenuItem
+            // 
+            this.adaugareProdusToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.produsNouToolStripMenuItem,
+            this.produsExistentToolStripMenuItem});
+            this.adaugareProdusToolStripMenuItem.Name = "adaugareProdusToolStripMenuItem";
+            this.adaugareProdusToolStripMenuItem.Size = new System.Drawing.Size(329, 44);
+            this.adaugareProdusToolStripMenuItem.Text = "Adaugare Produs";
+            // 
+            // produsNouToolStripMenuItem
+            // 
+            this.produsNouToolStripMenuItem.Name = "produsNouToolStripMenuItem";
+            this.produsNouToolStripMenuItem.Size = new System.Drawing.Size(309, 44);
+            this.produsNouToolStripMenuItem.Text = "Produs Nou";
+            // 
+            // produsExistentToolStripMenuItem
+            // 
+            this.produsExistentToolStripMenuItem.Name = "produsExistentToolStripMenuItem";
+            this.produsExistentToolStripMenuItem.Size = new System.Drawing.Size(309, 44);
+            this.produsExistentToolStripMenuItem.Text = "Produs Existent";
+            // 
+            // istoricVanzariToolStripMenuItem
+            // 
+            this.istoricVanzariToolStripMenuItem.Name = "istoricVanzariToolStripMenuItem";
+            this.istoricVanzariToolStripMenuItem.Size = new System.Drawing.Size(329, 44);
+            this.istoricVanzariToolStripMenuItem.Text = "Istoric Vanzari";
+            // 
             // SearchProductBox
             // 
             this.SearchProductBox.Location = new System.Drawing.Point(729, 195);
@@ -189,11 +191,32 @@
             this.SearchProductButton.UseVisualStyleBackColor = true;
             this.SearchProductButton.Click += new System.EventHandler(this.SearchProductButton_Click);
             // 
+            // RefreshButton
+            // 
+            this.RefreshButton.Location = new System.Drawing.Point(210, 185);
+            this.RefreshButton.Name = "RefreshButton";
+            this.RefreshButton.Size = new System.Drawing.Size(103, 41);
+            this.RefreshButton.TabIndex = 4;
+            this.RefreshButton.Text = "Refresh";
+            this.RefreshButton.UseVisualStyleBackColor = true;
+            this.RefreshButton.Click += new System.EventHandler(this.RefreshButton_Click);
+            // 
+            // CategoryComboBox
+            // 
+            this.CategoryComboBox.FormattingEnabled = true;
+            this.CategoryComboBox.Location = new System.Drawing.Point(319, 195);
+            this.CategoryComboBox.Name = "CategoryComboBox";
+            this.CategoryComboBox.Size = new System.Drawing.Size(142, 33);
+            this.CategoryComboBox.TabIndex = 5;
+            this.CategoryComboBox.SelectedIndexChanged += new System.EventHandler(this.CategoryComboBox_SelectedIndexChanged);
+            // 
             // ManageProductsForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1186, 696);
+            this.Controls.Add(this.CategoryComboBox);
+            this.Controls.Add(this.RefreshButton);
             this.Controls.Add(this.SearchProductButton);
             this.Controls.Add(this.SearchProductBox);
             this.Controls.Add(this.ProductsGrid);
@@ -227,5 +250,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn PriceColumn;
         private System.Windows.Forms.TextBox SearchProductBox;
         private System.Windows.Forms.Button SearchProductButton;
+        private System.Windows.Forms.Button RefreshButton;
+        private System.Windows.Forms.ComboBox CategoryComboBox;
     }
 }

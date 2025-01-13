@@ -17,6 +17,7 @@ namespace FInal_Project
         {
             InitializeComponent();
             LoadProductsAsync();
+            LoadCategoriesAsync();
         }
 
 
@@ -63,6 +64,65 @@ namespace FInal_Project
                 }
             });
         }
+        public void LoadProductsBasedOnCategory()
+        {
+            using (ProductDbContext db = new ProductDbContext())
+            {
+                DbSet<Product> products = db.Products;
+                DbSet<Category> categories = db.Categories;
+                ProductsGrid.Rows.Clear();
+                    foreach (Category category in categories)
+                    {
+                        if (CategoryComboBox.Text.Equals(category.categoryName))
+                        {
+                            foreach (Product product in products)
+                            {
+                                if (category.categoryID == product.CategoryID)
+                                {
+                                    ProductsGrid.Rows.Add(
+                                        product.ProductID,
+                                        product.ProductName,
+                                        product.ProductDescription,
+                                        product.EnteringDate,
+                                        product.ExpDate,
+                                        product.Stock,
+                                        product.Price
+                                    );
+                                }
+                            }
+                        }
+                    }
+            }
+        }
+        public async Task LoadCategoriesAsync()
+        {
+            await Task.Run(() =>
+            {
+                using (ProductDbContext db = new ProductDbContext())
+                {
+                    try
+                    {
+                        db.Database.Connection.Open();
+                        Console.WriteLine("Conexiune reusita");
+                    }
+                    catch (Exception ex)
+                    {
+                        Console.WriteLine(ex.Message);
+                    }
+                    CategoryComboBox.Invoke(new Action(() =>
+                    {
+                        DbSet<Category> categories = db.Categories;
+                        CategoryComboBox.Items.Clear();
+                        foreach (Category category in categories)
+                        {
+                            CategoryComboBox.Items.Add(
+                                category.categoryName
+                                );
+                        }
+                    }));
+                }
+            });
+        }
 
         private void SearchProductButton_Click(object sender, EventArgs e)
         {
@@ -87,6 +147,17 @@ namespace FInal_Project
                 }
 
             }
+        }
+
+        private void RefreshButton_Click(object sender, EventArgs e)
+        {
+            LoadProductsAsync();
+            CategoryComboBox.Text="";
+        }
+
+        private void CategoryComboBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            LoadProductsBasedOnCategory();
         }
     }
 }
