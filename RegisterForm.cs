@@ -70,6 +70,8 @@ namespace FInal_Project
                     account.LastName = LastName_txtBox.Text;
                     db.Accounts.Add(account);
                     db.SaveChanges();
+                    MessageBox.Show("You're all set! Your account has been created successfully.");
+                    this.Close();
                 }
                 else
                 {
@@ -77,8 +79,7 @@ namespace FInal_Project
                 }
                 
             }
-            MessageBox.Show("You're all set! Your account has been created successfully.");
-            this.Close();
+            
         }
     }
 }
