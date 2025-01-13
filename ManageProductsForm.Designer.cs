@@ -37,11 +37,11 @@
             this.StockColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.PriceColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
-            this.meniuToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.adaugareProdusToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.produsNouToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.produsExistentToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.istoricVanzariToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.menuToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.addProductToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.newProductToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.existingProducsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.sellsHistoryToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.SearchProductBox = new System.Windows.Forms.TextBox();
             this.SearchProductButton = new System.Windows.Forms.Button();
             this.RefreshButton = new System.Windows.Forms.Button();
@@ -130,48 +130,50 @@
             this.menuStrip1.GripMargin = new System.Windows.Forms.Padding(2, 2, 0, 2);
             this.menuStrip1.ImageScalingSize = new System.Drawing.Size(32, 32);
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.meniuToolStripMenuItem});
+            this.menuToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(1186, 40);
+            this.menuStrip1.Size = new System.Drawing.Size(1186, 42);
             this.menuStrip1.TabIndex = 1;
             this.menuStrip1.Text = "menuStrip1";
             // 
-            // meniuToolStripMenuItem
+            // menuToolStripMenuItem
             // 
-            this.meniuToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.adaugareProdusToolStripMenuItem,
-            this.istoricVanzariToolStripMenuItem});
-            this.meniuToolStripMenuItem.Name = "meniuToolStripMenuItem";
-            this.meniuToolStripMenuItem.Size = new System.Drawing.Size(103, 36);
-            this.meniuToolStripMenuItem.Text = "Meniu";
+            this.menuToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.addProductToolStripMenuItem,
+            this.sellsHistoryToolStripMenuItem});
+            this.menuToolStripMenuItem.Name = "menuToolStripMenuItem";
+            this.menuToolStripMenuItem.Size = new System.Drawing.Size(97, 38);
+            this.menuToolStripMenuItem.Text = "Menu";
             // 
-            // adaugareProdusToolStripMenuItem
+            // addProductToolStripMenuItem
             // 
-            this.adaugareProdusToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.produsNouToolStripMenuItem,
-            this.produsExistentToolStripMenuItem});
-            this.adaugareProdusToolStripMenuItem.Name = "adaugareProdusToolStripMenuItem";
-            this.adaugareProdusToolStripMenuItem.Size = new System.Drawing.Size(329, 44);
-            this.adaugareProdusToolStripMenuItem.Text = "Adaugare Produs";
+            this.addProductToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.newProductToolStripMenuItem,
+            this.existingProducsToolStripMenuItem});
+            this.addProductToolStripMenuItem.Name = "addProductToolStripMenuItem";
+            this.addProductToolStripMenuItem.Size = new System.Drawing.Size(359, 44);
+            this.addProductToolStripMenuItem.Text = "Add Product";
             // 
-            // produsNouToolStripMenuItem
+            // newProductToolStripMenuItem
             // 
-            this.produsNouToolStripMenuItem.Name = "produsNouToolStripMenuItem";
-            this.produsNouToolStripMenuItem.Size = new System.Drawing.Size(309, 44);
-            this.produsNouToolStripMenuItem.Text = "Produs Nou";
+            this.newProductToolStripMenuItem.Name = "newProductToolStripMenuItem";
+            this.newProductToolStripMenuItem.Size = new System.Drawing.Size(359, 44);
+            this.newProductToolStripMenuItem.Text = "New Product";
+            this.newProductToolStripMenuItem.Click += new System.EventHandler(this.newProductToolStripMenuItem_Click);
             // 
-            // produsExistentToolStripMenuItem
+            // existingProducsToolStripMenuItem
             // 
-            this.produsExistentToolStripMenuItem.Name = "produsExistentToolStripMenuItem";
-            this.produsExistentToolStripMenuItem.Size = new System.Drawing.Size(309, 44);
-            this.produsExistentToolStripMenuItem.Text = "Produs Existent";
+            this.existingProducsToolStripMenuItem.Name = "existingProducsToolStripMenuItem";
+            this.existingProducsToolStripMenuItem.Size = new System.Drawing.Size(359, 44);
+            this.existingProducsToolStripMenuItem.Text = "Existing Product";
+            this.existingProducsToolStripMenuItem.Click += new System.EventHandler(this.existingProducsToolStripMenuItem_Click);
             // 
-            // istoricVanzariToolStripMenuItem
+            // sellsHistoryToolStripMenuItem
             // 
-            this.istoricVanzariToolStripMenuItem.Name = "istoricVanzariToolStripMenuItem";
-            this.istoricVanzariToolStripMenuItem.Size = new System.Drawing.Size(329, 44);
-            this.istoricVanzariToolStripMenuItem.Text = "Istoric Vanzari";
+            this.sellsHistoryToolStripMenuItem.Name = "sellsHistoryToolStripMenuItem";
+            this.sellsHistoryToolStripMenuItem.Size = new System.Drawing.Size(359, 44);
+            this.sellsHistoryToolStripMenuItem.Text = "Sells History";
             // 
             // SearchProductBox
             // 
@@ -236,11 +238,11 @@
 
         private System.Windows.Forms.DataGridView ProductsGrid;
         private System.Windows.Forms.MenuStrip menuStrip1;
-        private System.Windows.Forms.ToolStripMenuItem meniuToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem adaugareProdusToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem produsNouToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem produsExistentToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem istoricVanzariToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem menuToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem addProductToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem newProductToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem existingProducsToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem sellsHistoryToolStripMenuItem;
         private System.Windows.Forms.DataGridViewTextBoxColumn IDProductColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn ProductColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn ProductDescription;

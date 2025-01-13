@@ -159,5 +159,19 @@ namespace FInal_Project
         {
             LoadProductsBasedOnCategory();
         }
+
+        private void newProductToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            AddNewProductForm addNewProductForm = new AddNewProductForm();
+            addNewProductForm.Show();
+            this.Hide();
+        }
+
+        private void existingProducsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            AddExistingProduct addExistingProductForm = new AddExistingProduct();
+            addExistingProductForm.Show();
+            this.Hide();
+        }
     }
 }

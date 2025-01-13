@@ -66,6 +66,18 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Account.cs" />
+    <Compile Include="AddExistingProduct.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddExistingProduct.Designer.cs">
+      <DependentUpon>AddExistingProduct.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AddNewProductForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddNewProductForm.Designer.cs">
+      <DependentUpon>AddNewProductForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Category.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
@@ -88,6 +100,12 @@
     <Compile Include="RegisterForm.Designer.cs">
       <DependentUpon>RegisterForm.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="AddExistingProduct.resx">
+      <DependentUpon>AddExistingProduct.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddNewProductForm.resx">
+      <DependentUpon>AddNewProductForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
