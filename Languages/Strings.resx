@@ -117,16 +117,67 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="addProductToolStripMenuItem" xml:space="preserve">
+    <value>Add Product</value>
+  </data>
+  <data name="ChangeLanguageLabel" xml:space="preserve">
+    <value>Change language</value>
+  </data>
+  <data name="ChooseCategoryLabel" xml:space="preserve">
+    <value>Choose category</value>
+  </data>
+  <data name="EnteringDateColumn" xml:space="preserve">
+    <value>Entering Date</value>
+  </data>
+  <data name="existingProducsToolStripMenuItem" xml:space="preserve">
+    <value>Existing Product</value>
+  </data>
+  <data name="ExpDateColumn" xml:space="preserve">
+    <value>Expiring Date</value>
+  </data>
+  <data name="IDProductColumn" xml:space="preserve">
+    <value>Product ID</value>
+  </data>
   <data name="InfoRegLabel" xml:space="preserve">
     <value>If you don't have an account, please</value>
   </data>
   <data name="LogInButton" xml:space="preserve">
     <value>Log In</value>
   </data>
+  <data name="menuToolStripMenuItem" xml:space="preserve">
+    <value>Menu</value>
+  </data>
+  <data name="newProductToolStripMenuItem" xml:space="preserve">
+    <value>New Product</value>
+  </data>
   <data name="PasswordLabel" xml:space="preserve">
     <value>Password:</value>
   </data>
+  <data name="PriceColumn" xml:space="preserve">
+    <value>Price</value>
+  </data>
+  <data name="ProductColumn" xml:space="preserve">
+    <value>Products</value>
+  </data>
+  <data name="ProductDescription" xml:space="preserve">
+    <value>Product Description</value>
+  </data>
+  <data name="RefreshButton" xml:space="preserve">
+    <value>Refresh</value>
+  </data>
   <data name="RegisterLabel" xml:space="preserve">
     <value>Register</value>
+  </data>
+  <data name="SearchProductButton" xml:space="preserve">
+    <value>Search</value>
+  </data>
+  <data name="SellProductColumn" xml:space="preserve">
+    <value>Sell Product</value>
+  </data>
+  <data name="sellsHistoryToolStripMenuItem" xml:space="preserve">
+    <value>Sells history</value>
+  </data>
+  <data name="StockColumn" xml:space="preserve">
+    <value>Stock</value>
   </data>
 </root>

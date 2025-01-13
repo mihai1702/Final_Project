@@ -29,13 +29,6 @@
         private void InitializeComponent()
         {
             this.ProductsGrid = new System.Windows.Forms.DataGridView();
-            this.IDProductColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ProductColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ProductDescription = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.EnteringDateColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ExpDateColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.StockColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.PriceColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.menuToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.addProductToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -46,6 +39,17 @@
             this.SearchProductButton = new System.Windows.Forms.Button();
             this.RefreshButton = new System.Windows.Forms.Button();
             this.CategoryComboBox = new System.Windows.Forms.ComboBox();
+            this.ChangeLanguageComboBox = new System.Windows.Forms.ComboBox();
+            this.IDProductColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ProductColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ProductDescription = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.EnteringDateColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ExpDateColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.StockColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.PriceColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.SellProductColumn = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.ChangeLanguageLabel = new System.Windows.Forms.Label();
+            this.ChooseCategoryLabel = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.ProductsGrid)).BeginInit();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -60,70 +64,15 @@
             this.EnteringDateColumn,
             this.ExpDateColumn,
             this.StockColumn,
-            this.PriceColumn});
-            this.ProductsGrid.Location = new System.Drawing.Point(210, 240);
+            this.PriceColumn,
+            this.SellProductColumn});
+            this.ProductsGrid.Location = new System.Drawing.Point(166, 256);
             this.ProductsGrid.Name = "ProductsGrid";
             this.ProductsGrid.RowHeadersWidth = 82;
             this.ProductsGrid.RowTemplate.Height = 33;
-            this.ProductsGrid.Size = new System.Drawing.Size(771, 242);
+            this.ProductsGrid.Size = new System.Drawing.Size(1020, 242);
             this.ProductsGrid.TabIndex = 0;
             this.ProductsGrid.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.ProductsGrid_CellContentClick);
-            // 
-            // IDProductColumn
-            // 
-            this.IDProductColumn.HeaderText = "Product ID";
-            this.IDProductColumn.MinimumWidth = 10;
-            this.IDProductColumn.Name = "IDProductColumn";
-            this.IDProductColumn.ReadOnly = true;
-            this.IDProductColumn.Width = 200;
-            // 
-            // ProductColumn
-            // 
-            this.ProductColumn.HeaderText = "Products";
-            this.ProductColumn.MinimumWidth = 10;
-            this.ProductColumn.Name = "ProductColumn";
-            this.ProductColumn.ReadOnly = true;
-            this.ProductColumn.Width = 200;
-            // 
-            // ProductDescription
-            // 
-            this.ProductDescription.HeaderText = "Description";
-            this.ProductDescription.MinimumWidth = 10;
-            this.ProductDescription.Name = "ProductDescription";
-            this.ProductDescription.ReadOnly = true;
-            this.ProductDescription.Width = 200;
-            // 
-            // EnteringDateColumn
-            // 
-            this.EnteringDateColumn.HeaderText = "Entering Date";
-            this.EnteringDateColumn.MinimumWidth = 10;
-            this.EnteringDateColumn.Name = "EnteringDateColumn";
-            this.EnteringDateColumn.ReadOnly = true;
-            this.EnteringDateColumn.Width = 200;
-            // 
-            // ExpDateColumn
-            // 
-            this.ExpDateColumn.HeaderText = "Expiring Date";
-            this.ExpDateColumn.MinimumWidth = 10;
-            this.ExpDateColumn.Name = "ExpDateColumn";
-            this.ExpDateColumn.ReadOnly = true;
-            this.ExpDateColumn.Width = 200;
-            // 
-            // StockColumn
-            // 
-            this.StockColumn.HeaderText = "Stock";
-            this.StockColumn.MinimumWidth = 10;
-            this.StockColumn.Name = "StockColumn";
-            this.StockColumn.ReadOnly = true;
-            this.StockColumn.Width = 200;
-            // 
-            // PriceColumn
-            // 
-            this.PriceColumn.HeaderText = "Price";
-            this.PriceColumn.MinimumWidth = 10;
-            this.PriceColumn.Name = "PriceColumn";
-            this.PriceColumn.ReadOnly = true;
-            this.PriceColumn.Width = 200;
             // 
             // menuStrip1
             // 
@@ -133,7 +82,7 @@
             this.menuToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(1186, 42);
+            this.menuStrip1.Size = new System.Drawing.Size(1374, 42);
             this.menuStrip1.TabIndex = 1;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -177,15 +126,15 @@
             // 
             // SearchProductBox
             // 
-            this.SearchProductBox.Location = new System.Drawing.Point(729, 195);
+            this.SearchProductBox.Location = new System.Drawing.Point(861, 219);
             this.SearchProductBox.Name = "SearchProductBox";
-            this.SearchProductBox.Size = new System.Drawing.Size(142, 31);
+            this.SearchProductBox.Size = new System.Drawing.Size(179, 31);
             this.SearchProductBox.TabIndex = 2;
             this.SearchProductBox.TextChanged += new System.EventHandler(this.SearchProductButton_Click);
             // 
             // SearchProductButton
             // 
-            this.SearchProductButton.Location = new System.Drawing.Point(877, 185);
+            this.SearchProductButton.Location = new System.Drawing.Point(1046, 209);
             this.SearchProductButton.Name = "SearchProductButton";
             this.SearchProductButton.Size = new System.Drawing.Size(103, 41);
             this.SearchProductButton.TabIndex = 3;
@@ -195,7 +144,7 @@
             // 
             // RefreshButton
             // 
-            this.RefreshButton.Location = new System.Drawing.Point(210, 185);
+            this.RefreshButton.Location = new System.Drawing.Point(230, 204);
             this.RefreshButton.Name = "RefreshButton";
             this.RefreshButton.Size = new System.Drawing.Size(103, 41);
             this.RefreshButton.TabIndex = 4;
@@ -206,17 +155,112 @@
             // CategoryComboBox
             // 
             this.CategoryComboBox.FormattingEnabled = true;
-            this.CategoryComboBox.Location = new System.Drawing.Point(319, 195);
+            this.CategoryComboBox.Location = new System.Drawing.Point(339, 209);
             this.CategoryComboBox.Name = "CategoryComboBox";
-            this.CategoryComboBox.Size = new System.Drawing.Size(142, 33);
+            this.CategoryComboBox.Size = new System.Drawing.Size(179, 33);
             this.CategoryComboBox.TabIndex = 5;
             this.CategoryComboBox.SelectedIndexChanged += new System.EventHandler(this.CategoryComboBox_SelectedIndexChanged);
             // 
+            // ChangeLanguageComboBox
+            // 
+            this.ChangeLanguageComboBox.FormattingEnabled = true;
+            this.ChangeLanguageComboBox.Items.AddRange(new object[] {
+            "en",
+            "ro"});
+            this.ChangeLanguageComboBox.Location = new System.Drawing.Point(1241, 52);
+            this.ChangeLanguageComboBox.Name = "ChangeLanguageComboBox";
+            this.ChangeLanguageComboBox.Size = new System.Drawing.Size(121, 33);
+            this.ChangeLanguageComboBox.TabIndex = 6;
+            this.ChangeLanguageComboBox.SelectedIndexChanged += new System.EventHandler(this.ChangeLanguageComboBox_SelectedIndexChanged);
+            // 
+            // IDProductColumn
+            // 
+            this.IDProductColumn.HeaderText = "Product ID";
+            this.IDProductColumn.MinimumWidth = 10;
+            this.IDProductColumn.Name = "IDProductColumn";
+            this.IDProductColumn.ReadOnly = true;
+            this.IDProductColumn.Width = 45;
+            // 
+            // ProductColumn
+            // 
+            this.ProductColumn.HeaderText = "Products";
+            this.ProductColumn.MinimumWidth = 10;
+            this.ProductColumn.Name = "ProductColumn";
+            this.ProductColumn.ReadOnly = true;
+            // 
+            // ProductDescription
+            // 
+            this.ProductDescription.HeaderText = "Description";
+            this.ProductDescription.MinimumWidth = 10;
+            this.ProductDescription.Name = "ProductDescription";
+            this.ProductDescription.ReadOnly = true;
+            this.ProductDescription.Width = 200;
+            // 
+            // EnteringDateColumn
+            // 
+            this.EnteringDateColumn.HeaderText = "Entering Date";
+            this.EnteringDateColumn.MinimumWidth = 10;
+            this.EnteringDateColumn.Name = "EnteringDateColumn";
+            this.EnteringDateColumn.ReadOnly = true;
+            this.EnteringDateColumn.Width = 200;
+            // 
+            // ExpDateColumn
+            // 
+            this.ExpDateColumn.HeaderText = "Expiring Date";
+            this.ExpDateColumn.MinimumWidth = 10;
+            this.ExpDateColumn.Name = "ExpDateColumn";
+            this.ExpDateColumn.ReadOnly = true;
+            this.ExpDateColumn.Width = 200;
+            // 
+            // StockColumn
+            // 
+            this.StockColumn.HeaderText = "Stock";
+            this.StockColumn.MinimumWidth = 10;
+            this.StockColumn.Name = "StockColumn";
+            this.StockColumn.ReadOnly = true;
+            this.StockColumn.Width = 45;
+            // 
+            // PriceColumn
+            // 
+            this.PriceColumn.HeaderText = "Price";
+            this.PriceColumn.MinimumWidth = 10;
+            this.PriceColumn.Name = "PriceColumn";
+            this.PriceColumn.ReadOnly = true;
+            this.PriceColumn.Width = 45;
+            // 
+            // SellProductColumn
+            // 
+            this.SellProductColumn.HeaderText = "Sell Product";
+            this.SellProductColumn.MinimumWidth = 10;
+            this.SellProductColumn.Name = "SellProductColumn";
+            this.SellProductColumn.Text = "Sell";
+            this.SellProductColumn.UseColumnTextForButtonValue = true;
+            // 
+            // ChangeLanguageLabel
+            // 
+            this.ChangeLanguageLabel.AutoSize = true;
+            this.ChangeLanguageLabel.Location = new System.Drawing.Point(1041, 55);
+            this.ChangeLanguageLabel.Name = "ChangeLanguageLabel";
+            this.ChangeLanguageLabel.Size = new System.Drawing.Size(189, 25);
+            this.ChangeLanguageLabel.TabIndex = 7;
+            this.ChangeLanguageLabel.Text = "Change Language";
+            // 
+            // ChooseCategoryLabel
+            // 
+            this.ChooseCategoryLabel.AutoSize = true;
+            this.ChooseCategoryLabel.Location = new System.Drawing.Point(339, 178);
+            this.ChooseCategoryLabel.Name = "ChooseCategoryLabel";
+            this.ChooseCategoryLabel.Size = new System.Drawing.Size(179, 25);
+            this.ChooseCategoryLabel.TabIndex = 8;
+            this.ChooseCategoryLabel.Text = "Choose Category";
+            // 
             // ManageProductsForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1186, 696);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
+            this.ClientSize = new System.Drawing.Size(1374, 629);
+            this.Controls.Add(this.ChooseCategoryLabel);
+            this.Controls.Add(this.ChangeLanguageLabel);
+            this.Controls.Add(this.ChangeLanguageComboBox);
             this.Controls.Add(this.CategoryComboBox);
             this.Controls.Add(this.RefreshButton);
             this.Controls.Add(this.SearchProductButton);
@@ -243,6 +287,11 @@
         private System.Windows.Forms.ToolStripMenuItem newProductToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem existingProducsToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem sellsHistoryToolStripMenuItem;
+        private System.Windows.Forms.TextBox SearchProductBox;
+        private System.Windows.Forms.Button SearchProductButton;
+        private System.Windows.Forms.Button RefreshButton;
+        private System.Windows.Forms.ComboBox CategoryComboBox;
+        private System.Windows.Forms.ComboBox ChangeLanguageComboBox;
         private System.Windows.Forms.DataGridViewTextBoxColumn IDProductColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn ProductColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn ProductDescription;
@@ -250,9 +299,8 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn ExpDateColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn StockColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn PriceColumn;
-        private System.Windows.Forms.TextBox SearchProductBox;
-        private System.Windows.Forms.Button SearchProductButton;
-        private System.Windows.Forms.Button RefreshButton;
-        private System.Windows.Forms.ComboBox CategoryComboBox;
+        private System.Windows.Forms.DataGridViewButtonColumn SellProductColumn;
+        private System.Windows.Forms.Label ChangeLanguageLabel;
+        private System.Windows.Forms.Label ChooseCategoryLabel;
     }
 }

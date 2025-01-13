@@ -61,6 +61,69 @@ namespace Languages {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Add Product.
+        /// </summary>
+        public static string addProductToolStripMenuItem {
+            get {
+                return ResourceManager.GetString("addProductToolStripMenuItem", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Change language.
+        /// </summary>
+        public static string ChangeLanguageLabel {
+            get {
+                return ResourceManager.GetString("ChangeLanguageLabel", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Choose category.
+        /// </summary>
+        public static string ChooseCategoryLabel {
+            get {
+                return ResourceManager.GetString("ChooseCategoryLabel", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Entering Date.
+        /// </summary>
+        public static string EnteringDateColumn {
+            get {
+                return ResourceManager.GetString("EnteringDateColumn", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Existing Product.
+        /// </summary>
+        public static string existingProducsToolStripMenuItem {
+            get {
+                return ResourceManager.GetString("existingProducsToolStripMenuItem", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Expiring Date.
+        /// </summary>
+        public static string ExpDateColumn {
+            get {
+                return ResourceManager.GetString("ExpDateColumn", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Product ID.
+        /// </summary>
+        public static string IDProductColumn {
+            get {
+                return ResourceManager.GetString("IDProductColumn", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to If you don&apos;t have an account, please.
         /// </summary>
         public static string InfoRegLabel {
@@ -79,6 +142,24 @@ namespace Languages {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Menu.
+        /// </summary>
+        public static string menuToolStripMenuItem {
+            get {
+                return ResourceManager.GetString("menuToolStripMenuItem", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to New Product.
+        /// </summary>
+        public static string newProductToolStripMenuItem {
+            get {
+                return ResourceManager.GetString("newProductToolStripMenuItem", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Password:.
         /// </summary>
         public static string PasswordLabel {
@@ -88,11 +169,83 @@ namespace Languages {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Price.
+        /// </summary>
+        public static string PriceColumn {
+            get {
+                return ResourceManager.GetString("PriceColumn", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Products.
+        /// </summary>
+        public static string ProductColumn {
+            get {
+                return ResourceManager.GetString("ProductColumn", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Product Description.
+        /// </summary>
+        public static string ProductDescription {
+            get {
+                return ResourceManager.GetString("ProductDescription", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Refresh.
+        /// </summary>
+        public static string RefreshButton {
+            get {
+                return ResourceManager.GetString("RefreshButton", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Register.
         /// </summary>
         public static string RegisterLabel {
             get {
                 return ResourceManager.GetString("RegisterLabel", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Search.
+        /// </summary>
+        public static string SearchProductButton {
+            get {
+                return ResourceManager.GetString("SearchProductButton", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Sell Product.
+        /// </summary>
+        public static string SellProductColumn {
+            get {
+                return ResourceManager.GetString("SellProductColumn", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Sells history.
+        /// </summary>
+        public static string sellsHistoryToolStripMenuItem {
+            get {
+                return ResourceManager.GetString("sellsHistoryToolStripMenuItem", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Stock.
+        /// </summary>
+        public static string StockColumn {
+            get {
+                return ResourceManager.GetString("StockColumn", resourceCulture);
             }
         }
     }

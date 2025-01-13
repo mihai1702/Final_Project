@@ -144,6 +144,7 @@
             this.CategoryComboBox.Name = "CategoryComboBox";
             this.CategoryComboBox.Size = new System.Drawing.Size(407, 33);
             this.CategoryComboBox.TabIndex = 11;
+            this.CategoryComboBox.SelectedIndexChanged += new System.EventHandler(this.CategoryComboBox_SelectedIndexChanged);
             // 
             // PriceTextBox
             // 

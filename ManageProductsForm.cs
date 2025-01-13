@@ -6,6 +6,7 @@ using System.Data.Entity;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -172,6 +173,32 @@ namespace FInal_Project
             AddExistingProduct addExistingProductForm = new AddExistingProduct();
             addExistingProductForm.Show();
             this.Hide();
+        }
+
+        private void ChangeLanguageComboBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            Thread.CurrentThread.CurrentUICulture = new System.Globalization.CultureInfo(ChangeLanguageComboBox.Text);
+            ApplyTranslation();
+        }
+        private void ApplyTranslation()
+        {
+            RefreshButton.Text = Languages.Strings.RefreshButton;
+            ChangeLanguageLabel.Text= Languages.Strings.ChangeLanguageLabel;
+            ChooseCategoryLabel.Text= Languages.Strings.ChooseCategoryLabel;
+            menuToolStripMenuItem.Text=Languages.Strings.menuToolStripMenuItem;
+            addProductToolStripMenuItem.Text = Languages.Strings.addProductToolStripMenuItem;
+            sellsHistoryToolStripMenuItem.Text=Languages.Strings.sellsHistoryToolStripMenuItem;
+            newProductToolStripMenuItem.Text = Languages.Strings.newProductToolStripMenuItem;
+            existingProducsToolStripMenuItem.Text = Languages.Strings.existingProducsToolStripMenuItem;
+            SearchProductButton.Text = Languages.Strings.SearchProductButton;
+            ProductColumn.HeaderText = Languages.Strings.ProductColumn;
+            IDProductColumn.HeaderText= Languages.Strings.IDProductColumn;
+            ProductDescription.HeaderText = Languages.Strings.ProductDescription;
+            EnteringDateColumn.HeaderText = Languages.Strings.EnteringDateColumn;
+            ExpDateColumn.HeaderText=Languages.Strings.ExpDateColumn;
+            StockColumn.HeaderText = Languages.Strings.StockColumn;
+            PriceColumn.HeaderText = Languages.Strings.PriceColumn;
+            SellProductColumn.HeaderText = Languages.Strings.SellProductColumn;
         }
     }
 }

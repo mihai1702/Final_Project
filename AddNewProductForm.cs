@@ -31,7 +31,7 @@ namespace FInal_Project
                 DbSet<Category> categories = db.Categories;
                 foreach (Category cat in categories)
                 {
-                    if (cat.categoryID.Equals(CategoryComboBox.Text))
+                    if (cat.categoryName.Equals(CategoryComboBox.Text))
                         prodID = cat.categoryID;
                 }
             }
@@ -87,6 +87,11 @@ namespace FInal_Project
                         );
                 }
             }
+        }
+
+        private void CategoryComboBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
