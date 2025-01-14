@@ -40,6 +40,8 @@
             this.RefreshButton = new System.Windows.Forms.Button();
             this.CategoryComboBox = new System.Windows.Forms.ComboBox();
             this.ChangeLanguageComboBox = new System.Windows.Forms.ComboBox();
+            this.ChangeLanguageLabel = new System.Windows.Forms.Label();
+            this.ChooseCategoryLabel = new System.Windows.Forms.Label();
             this.IDProductColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ProductColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ProductDescription = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -48,8 +50,9 @@
             this.StockColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.PriceColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.SellProductColumn = new System.Windows.Forms.DataGridViewButtonColumn();
-            this.ChangeLanguageLabel = new System.Windows.Forms.Label();
-            this.ChooseCategoryLabel = new System.Windows.Forms.Label();
+            this.addCategoryToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.deleteCategoryToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.manageUsersToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.ProductsGrid)).BeginInit();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -66,23 +69,25 @@
             this.StockColumn,
             this.PriceColumn,
             this.SellProductColumn});
-            this.ProductsGrid.Location = new System.Drawing.Point(166, 256);
+            this.ProductsGrid.Location = new System.Drawing.Point(137, 266);
             this.ProductsGrid.Name = "ProductsGrid";
             this.ProductsGrid.RowHeadersWidth = 82;
             this.ProductsGrid.RowTemplate.Height = 33;
-            this.ProductsGrid.Size = new System.Drawing.Size(1020, 242);
+            this.ProductsGrid.Size = new System.Drawing.Size(1120, 242);
             this.ProductsGrid.TabIndex = 0;
             this.ProductsGrid.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.ProductsGrid_CellContentClick);
+            this.ProductsGrid.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.ProductsGrid_CellDoubleClick);
             // 
             // menuStrip1
             // 
             this.menuStrip1.GripMargin = new System.Windows.Forms.Padding(2, 2, 0, 2);
             this.menuStrip1.ImageScalingSize = new System.Drawing.Size(32, 32);
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.menuToolStripMenuItem});
+            this.menuToolStripMenuItem,
+            this.manageUsersToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(1374, 42);
+            this.menuStrip1.Size = new System.Drawing.Size(1374, 40);
             this.menuStrip1.TabIndex = 1;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -90,7 +95,9 @@
             // 
             this.menuToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.addProductToolStripMenuItem,
-            this.sellsHistoryToolStripMenuItem});
+            this.sellsHistoryToolStripMenuItem,
+            this.addCategoryToolStripMenuItem,
+            this.deleteCategoryToolStripMenuItem});
             this.menuToolStripMenuItem.Name = "menuToolStripMenuItem";
             this.menuToolStripMenuItem.Size = new System.Drawing.Size(97, 38);
             this.menuToolStripMenuItem.Text = "Menu";
@@ -101,20 +108,20 @@
             this.newProductToolStripMenuItem,
             this.existingProducsToolStripMenuItem});
             this.addProductToolStripMenuItem.Name = "addProductToolStripMenuItem";
-            this.addProductToolStripMenuItem.Size = new System.Drawing.Size(359, 44);
+            this.addProductToolStripMenuItem.Size = new System.Drawing.Size(279, 44);
             this.addProductToolStripMenuItem.Text = "Add Product";
             // 
             // newProductToolStripMenuItem
             // 
             this.newProductToolStripMenuItem.Name = "newProductToolStripMenuItem";
-            this.newProductToolStripMenuItem.Size = new System.Drawing.Size(359, 44);
+            this.newProductToolStripMenuItem.Size = new System.Drawing.Size(317, 44);
             this.newProductToolStripMenuItem.Text = "New Product";
             this.newProductToolStripMenuItem.Click += new System.EventHandler(this.newProductToolStripMenuItem_Click);
             // 
             // existingProducsToolStripMenuItem
             // 
             this.existingProducsToolStripMenuItem.Name = "existingProducsToolStripMenuItem";
-            this.existingProducsToolStripMenuItem.Size = new System.Drawing.Size(359, 44);
+            this.existingProducsToolStripMenuItem.Size = new System.Drawing.Size(317, 44);
             this.existingProducsToolStripMenuItem.Text = "Existing Product";
             this.existingProducsToolStripMenuItem.Click += new System.EventHandler(this.existingProducsToolStripMenuItem_Click);
             // 
@@ -123,6 +130,7 @@
             this.sellsHistoryToolStripMenuItem.Name = "sellsHistoryToolStripMenuItem";
             this.sellsHistoryToolStripMenuItem.Size = new System.Drawing.Size(359, 44);
             this.sellsHistoryToolStripMenuItem.Text = "Sells History";
+            this.sellsHistoryToolStripMenuItem.Click += new System.EventHandler(this.sellsHistoryToolStripMenuItem_Click);
             // 
             // SearchProductBox
             // 
@@ -173,6 +181,24 @@
             this.ChangeLanguageComboBox.TabIndex = 6;
             this.ChangeLanguageComboBox.SelectedIndexChanged += new System.EventHandler(this.ChangeLanguageComboBox_SelectedIndexChanged);
             // 
+            // ChangeLanguageLabel
+            // 
+            this.ChangeLanguageLabel.AutoSize = true;
+            this.ChangeLanguageLabel.Location = new System.Drawing.Point(1041, 55);
+            this.ChangeLanguageLabel.Name = "ChangeLanguageLabel";
+            this.ChangeLanguageLabel.Size = new System.Drawing.Size(189, 25);
+            this.ChangeLanguageLabel.TabIndex = 7;
+            this.ChangeLanguageLabel.Text = "Change Language";
+            // 
+            // ChooseCategoryLabel
+            // 
+            this.ChooseCategoryLabel.AutoSize = true;
+            this.ChooseCategoryLabel.Location = new System.Drawing.Point(339, 178);
+            this.ChooseCategoryLabel.Name = "ChooseCategoryLabel";
+            this.ChooseCategoryLabel.Size = new System.Drawing.Size(179, 25);
+            this.ChooseCategoryLabel.TabIndex = 8;
+            this.ChooseCategoryLabel.Text = "Choose Category";
+            // 
             // IDProductColumn
             // 
             this.IDProductColumn.HeaderText = "Product ID";
@@ -187,6 +213,7 @@
             this.ProductColumn.MinimumWidth = 10;
             this.ProductColumn.Name = "ProductColumn";
             this.ProductColumn.ReadOnly = true;
+            this.ProductColumn.Width = 200;
             // 
             // ProductDescription
             // 
@@ -236,23 +263,24 @@
             this.SellProductColumn.Text = "Sell";
             this.SellProductColumn.UseColumnTextForButtonValue = true;
             // 
-            // ChangeLanguageLabel
+            // addCategoryToolStripMenuItem
             // 
-            this.ChangeLanguageLabel.AutoSize = true;
-            this.ChangeLanguageLabel.Location = new System.Drawing.Point(1041, 55);
-            this.ChangeLanguageLabel.Name = "ChangeLanguageLabel";
-            this.ChangeLanguageLabel.Size = new System.Drawing.Size(189, 25);
-            this.ChangeLanguageLabel.TabIndex = 7;
-            this.ChangeLanguageLabel.Text = "Change Language";
+            this.addCategoryToolStripMenuItem.Name = "addCategoryToolStripMenuItem";
+            this.addCategoryToolStripMenuItem.Size = new System.Drawing.Size(359, 44);
+            this.addCategoryToolStripMenuItem.Text = "Add Category";
+            this.addCategoryToolStripMenuItem.Click += new System.EventHandler(this.addCategoryToolStripMenuItem_Click);
             // 
-            // ChooseCategoryLabel
+            // deleteCategoryToolStripMenuItem
             // 
-            this.ChooseCategoryLabel.AutoSize = true;
-            this.ChooseCategoryLabel.Location = new System.Drawing.Point(339, 178);
-            this.ChooseCategoryLabel.Name = "ChooseCategoryLabel";
-            this.ChooseCategoryLabel.Size = new System.Drawing.Size(179, 25);
-            this.ChooseCategoryLabel.TabIndex = 8;
-            this.ChooseCategoryLabel.Text = "Choose Category";
+            this.deleteCategoryToolStripMenuItem.Name = "deleteCategoryToolStripMenuItem";
+            this.deleteCategoryToolStripMenuItem.Size = new System.Drawing.Size(359, 44);
+            this.deleteCategoryToolStripMenuItem.Text = "Delete Category";
+            // 
+            // manageUsersToolStripMenuItem
+            // 
+            this.manageUsersToolStripMenuItem.Name = "manageUsersToolStripMenuItem";
+            this.manageUsersToolStripMenuItem.Size = new System.Drawing.Size(185, 36);
+            this.manageUsersToolStripMenuItem.Text = "Manage Users";
             // 
             // ManageProductsForm
             // 
@@ -292,6 +320,8 @@
         private System.Windows.Forms.Button RefreshButton;
         private System.Windows.Forms.ComboBox CategoryComboBox;
         private System.Windows.Forms.ComboBox ChangeLanguageComboBox;
+        private System.Windows.Forms.Label ChangeLanguageLabel;
+        private System.Windows.Forms.Label ChooseCategoryLabel;
         private System.Windows.Forms.DataGridViewTextBoxColumn IDProductColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn ProductColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn ProductDescription;
@@ -300,7 +330,8 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn StockColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn PriceColumn;
         private System.Windows.Forms.DataGridViewButtonColumn SellProductColumn;
-        private System.Windows.Forms.Label ChangeLanguageLabel;
-        private System.Windows.Forms.Label ChooseCategoryLabel;
+        private System.Windows.Forms.ToolStripMenuItem addCategoryToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem deleteCategoryToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem manageUsersToolStripMenuItem;
     }
 }

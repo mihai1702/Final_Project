@@ -6,6 +6,7 @@ using System.Data.Entity;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -92,6 +93,25 @@ namespace FInal_Project
         private void CategoryComboBox_SelectedIndexChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void ChooseLanguageNewProductComboBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            Thread.CurrentThread.CurrentUICulture = new System.Globalization.CultureInfo(ChooseLanguageNewProductComboBox.Text);
+            ApplyTranslation();
+        }
+        private void ApplyTranslation()
+        {
+
+            ProductNameLabel.Text = Languages.Strings.ProductNameLabel;
+            ProductDescriptionLabel.Text = Languages.Strings.ProductDescriptionLabel;
+            EnteringDateLabel.Text = Languages.Strings.EnteringDateLabel;
+            ExpiringDateLabel.Text = Languages.Strings.ExpiringDateLabel;
+            CategoryLabel.Text = Languages.Strings.CategoryLabel;
+            StockLabel.Text = Languages.Strings.StockLabel;
+            PriceLabel.Text = Languages.Strings.PriceLabel;
+            AddProductButton.Text = Languages.Strings.AddProductButton;
+            ChooseLanguageNewProductLabel.Text=Languages.Strings.ChooseLanguageNewProductLabel;
         }
     }
 }

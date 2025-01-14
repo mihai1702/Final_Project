@@ -43,6 +43,8 @@
             this.PriceTextBox = new System.Windows.Forms.TextBox();
             this.AddProductButton = new System.Windows.Forms.Button();
             this.StockUpDown = new System.Windows.Forms.NumericUpDown();
+            this.ChooseLanguageNewProductComboBox = new System.Windows.Forms.ComboBox();
+            this.ChooseLanguageNewProductLabel = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.StockUpDown)).BeginInit();
             this.SuspendLayout();
             // 
@@ -170,11 +172,34 @@
             this.StockUpDown.Size = new System.Drawing.Size(407, 31);
             this.StockUpDown.TabIndex = 15;
             // 
+            // ChooseLanguageNewProductComboBox
+            // 
+            this.ChooseLanguageNewProductComboBox.FormattingEnabled = true;
+            this.ChooseLanguageNewProductComboBox.Items.AddRange(new object[] {
+            "en",
+            "ro"});
+            this.ChooseLanguageNewProductComboBox.Location = new System.Drawing.Point(920, 12);
+            this.ChooseLanguageNewProductComboBox.Name = "ChooseLanguageNewProductComboBox";
+            this.ChooseLanguageNewProductComboBox.Size = new System.Drawing.Size(121, 33);
+            this.ChooseLanguageNewProductComboBox.TabIndex = 16;
+            this.ChooseLanguageNewProductComboBox.SelectedIndexChanged += new System.EventHandler(this.ChooseLanguageNewProductComboBox_SelectedIndexChanged);
+            // 
+            // ChooseLanguageNewProductLabel
+            // 
+            this.ChooseLanguageNewProductLabel.AutoSize = true;
+            this.ChooseLanguageNewProductLabel.Location = new System.Drawing.Point(726, 15);
+            this.ChooseLanguageNewProductLabel.Name = "ChooseLanguageNewProductLabel";
+            this.ChooseLanguageNewProductLabel.Size = new System.Drawing.Size(188, 25);
+            this.ChooseLanguageNewProductLabel.TabIndex = 17;
+            this.ChooseLanguageNewProductLabel.Text = "Choose Language";
+            // 
             // AddNewProductForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1053, 450);
+            this.Controls.Add(this.ChooseLanguageNewProductLabel);
+            this.Controls.Add(this.ChooseLanguageNewProductComboBox);
             this.Controls.Add(this.StockUpDown);
             this.Controls.Add(this.AddProductButton);
             this.Controls.Add(this.PriceTextBox);
@@ -216,5 +241,7 @@
         private System.Windows.Forms.TextBox PriceTextBox;
         private System.Windows.Forms.Button AddProductButton;
         private System.Windows.Forms.NumericUpDown StockUpDown;
+        private System.Windows.Forms.ComboBox ChooseLanguageNewProductComboBox;
+        private System.Windows.Forms.Label ChooseLanguageNewProductLabel;
     }
 }

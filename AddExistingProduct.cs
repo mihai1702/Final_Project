@@ -6,6 +6,7 @@ using System.Data.Entity;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -42,6 +43,21 @@ namespace FInal_Project
                 }
 
             }
+        }
+
+        private void ApplyTranslation()
+        {
+            ProductIDAddExLabel.Text=Languages.Strings.ProductIDAddExLabel;
+            QuantityAddExLabel.Text = Languages.Strings.QuantityAddExLabel;
+            AddExistingProductButton.Text = Languages.Strings.AddExistingProductButton;
+            ChangeLanguageAddExLabel.Text = Languages.Strings.ChangeLanguageAddExLabel;
+
+        }
+
+        private void ChangeLanguageAddExComboBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            Thread.CurrentThread.CurrentUICulture = new System.Globalization.CultureInfo(ChangeLanguageAddExComboBox.Text);
+            ApplyTranslation();
         }
     }
 }

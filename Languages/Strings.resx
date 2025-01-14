@@ -117,8 +117,20 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="AddExistingProductButton" xml:space="preserve">
+    <value>Add</value>
+  </data>
+  <data name="AddProductButton" xml:space="preserve">
+    <value>Add</value>
+  </data>
   <data name="addProductToolStripMenuItem" xml:space="preserve">
     <value>Add Product</value>
+  </data>
+  <data name="CategoryLabel" xml:space="preserve">
+    <value>Category</value>
+  </data>
+  <data name="ChangeLanguageAddExLabel" xml:space="preserve">
+    <value>Change Language</value>
   </data>
   <data name="ChangeLanguageLabel" xml:space="preserve">
     <value>Change language</value>
@@ -126,13 +138,22 @@
   <data name="ChooseCategoryLabel" xml:space="preserve">
     <value>Choose category</value>
   </data>
+  <data name="ChooseLanguageNewProductLabel" xml:space="preserve">
+    <value>Choose Language</value>
+  </data>
   <data name="EnteringDateColumn" xml:space="preserve">
+    <value>Entering Date</value>
+  </data>
+  <data name="EnteringDateLabel" xml:space="preserve">
     <value>Entering Date</value>
   </data>
   <data name="existingProducsToolStripMenuItem" xml:space="preserve">
     <value>Existing Product</value>
   </data>
   <data name="ExpDateColumn" xml:space="preserve">
+    <value>Expiring Date</value>
+  </data>
+  <data name="ExpiringDateLabel" xml:space="preserve">
     <value>Expiring Date</value>
   </data>
   <data name="IDProductColumn" xml:space="preserve">
@@ -156,11 +177,26 @@
   <data name="PriceColumn" xml:space="preserve">
     <value>Price</value>
   </data>
+  <data name="PriceLabel" xml:space="preserve">
+    <value>Price</value>
+  </data>
   <data name="ProductColumn" xml:space="preserve">
     <value>Products</value>
   </data>
   <data name="ProductDescription" xml:space="preserve">
     <value>Product Description</value>
+  </data>
+  <data name="ProductDescriptionLabel" xml:space="preserve">
+    <value>Product Description</value>
+  </data>
+  <data name="ProductIDAddExLabel" xml:space="preserve">
+    <value>Product ID</value>
+  </data>
+  <data name="ProductNameLabel" xml:space="preserve">
+    <value>Product Name</value>
+  </data>
+  <data name="QuantityAddExLabel" xml:space="preserve">
+    <value>Quantity</value>
   </data>
   <data name="RefreshButton" xml:space="preserve">
     <value>Refresh</value>
@@ -178,6 +214,9 @@
     <value>Sells history</value>
   </data>
   <data name="StockColumn" xml:space="preserve">
+    <value>Stock</value>
+  </data>
+  <data name="StockLabel" xml:space="preserve">
     <value>Stock</value>
   </data>
 </root>

@@ -117,106 +117,16 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="AddExistingProductButton" xml:space="preserve">
-    <value>Adauga</value>
-  </data>
-  <data name="AddProductButton" xml:space="preserve">
-    <value>Adauga</value>
-  </data>
-  <data name="addProductToolStripMenuItem" xml:space="preserve">
-    <value>Adauga Produs</value>
-  </data>
-  <data name="CategoryLabel" xml:space="preserve">
-    <value>Categorie</value>
-  </data>
-  <data name="ChangeLanguageAddExLabel" xml:space="preserve">
-    <value>Schimba limba</value>
-  </data>
-  <data name="ChangeLanguageLabel" xml:space="preserve">
-    <value>Schimba limba</value>
-  </data>
-  <data name="ChooseCategoryLabel" xml:space="preserve">
-    <value>Alege categorie</value>
-  </data>
-  <data name="ChooseLanguageNewProductLabel" xml:space="preserve">
-    <value>Alege limba</value>
-  </data>
-  <data name="EnteringDateColumn" xml:space="preserve">
-    <value>Data de intrare</value>
-  </data>
-  <data name="EnteringDateLabel" xml:space="preserve">
-    <value>EnteringDate</value>
-  </data>
-  <data name="existingProducsToolStripMenuItem" xml:space="preserve">
-    <value>Produs existent</value>
-  </data>
-  <data name="ExpDateColumn" xml:space="preserve">
-    <value>Data expirarii</value>
-  </data>
-  <data name="ExpiringDateLabel" xml:space="preserve">
-    <value>Data expirarii</value>
-  </data>
-  <data name="IDProductColumn" xml:space="preserve">
-    <value>ID produs</value>
-  </data>
-  <data name="InfoRegLabel" xml:space="preserve">
-    <value>Daca nu aveti un cont, va rugam sa va </value>
-  </data>
-  <data name="LogInButton" xml:space="preserve">
-    <value>Log in</value>
-  </data>
-  <data name="menuToolStripMenuItem" xml:space="preserve">
-    <value>Meniu</value>
-  </data>
-  <data name="newProductToolStripMenuItem" xml:space="preserve">
-    <value>Produs nou</value>
-  </data>
-  <data name="PasswordLabel" xml:space="preserve">
-    <value>Parola:</value>
-  </data>
-  <data name="PriceColumn" xml:space="preserve">
-    <value>Pret</value>
-  </data>
-  <data name="PriceLabel" xml:space="preserve">
-    <value>Pret</value>
-  </data>
-  <data name="ProductColumn" xml:space="preserve">
-    <value>Produse</value>
-  </data>
-  <data name="ProductDescription" xml:space="preserve">
-    <value>Descriere Produs</value>
-  </data>
-  <data name="ProductDescriptionLabel" xml:space="preserve">
-    <value>Descriere Produs</value>
-  </data>
-  <data name="ProductIDAddExLabel" xml:space="preserve">
-    <value>ID produs</value>
-  </data>
-  <data name="ProductNameLabel" xml:space="preserve">
-    <value>Nume Produs</value>
-  </data>
-  <data name="QuantityAddExLabel" xml:space="preserve">
-    <value>Cantitate</value>
-  </data>
-  <data name="RefreshButton" xml:space="preserve">
-    <value>Reimprospatare</value>
-  </data>
-  <data name="RegisterLabel" xml:space="preserve">
-    <value>Inregistreaza-te</value>
-  </data>
-  <data name="SearchProductButton" xml:space="preserve">
-    <value>Cauta</value>
-  </data>
-  <data name="SellProductColumn" xml:space="preserve">
-    <value>Vinde Produs</value>
-  </data>
-  <data name="sellsHistoryToolStripMenuItem" xml:space="preserve">
-    <value>Istoric Vanzari</value>
-  </data>
-  <data name="StockColumn" xml:space="preserve">
-    <value>Stoc</value>
-  </data>
-  <data name="StockLabel" xml:space="preserve">
-    <value>Stoc</value>
-  </data>
+  <metadata name="SellIDColumn.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="ProductIDColumn.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="ProductNameColumn.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="SellStockColumn.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
 </root>

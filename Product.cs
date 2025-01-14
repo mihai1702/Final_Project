@@ -30,5 +30,6 @@ namespace FInal_Project
         public DbSet<Product> Products { get; set; }
         public DbSet<Account> Accounts { get; set; }
         public DbSet<Category> Categories { get; set; }
+        public DbSet<sellHistory> sellsHistory { get; set; }
     }
 }
