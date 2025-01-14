@@ -85,12 +85,6 @@
       <DependentUpon>AddNewProductForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Category.cs" />
-    <Compile Include="ChangePasswordUser.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="ChangePasswordUser.Designer.cs">
-      <DependentUpon>ChangePasswordUser.cs</DependentUpon>
-    </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -118,26 +112,18 @@
     <Compile Include="RegisterForm.Designer.cs">
       <DependentUpon>RegisterForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="UpdateInfoUser.cs">
+    <Compile Include="sellHistory.cs" />
+    <Compile Include="SellProductForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="UpdateInfoUser.Designer.cs">
-      <DependentUpon>UpdateInfoUser.cs</DependentUpon>
-    </Compile>
-    <Compile Include="UserManageProduct.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="UserManageProduct.Designer.cs">
-      <DependentUpon>UserManageProduct.cs</DependentUpon>
+    <Compile Include="SellProductForm.Designer.cs">
+      <DependentUpon>SellProductForm.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="AddExistingProduct.resx">
       <DependentUpon>AddExistingProduct.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="AddNewProductForm.resx">
       <DependentUpon>AddNewProductForm.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="ChangePasswordUser.resx">
-      <DependentUpon>ChangePasswordUser.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
@@ -160,11 +146,8 @@
     <EmbeddedResource Include="RegisterForm.resx">
       <DependentUpon>RegisterForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UpdateInfoUser.resx">
-      <DependentUpon>UpdateInfoUser.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="UserManageProduct.resx">
-      <DependentUpon>UserManageProduct.cs</DependentUpon>
+    <EmbeddedResource Include="SellProductForm.resx">
+      <DependentUpon>SellProductForm.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="FinalProject_DB.db" />
     <None Include="packages.config" />
