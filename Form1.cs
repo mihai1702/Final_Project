@@ -66,9 +66,18 @@ namespace FInal_Project
                         string pass= sb.ToString();
                         if(pass == account.Password)
                         {
-                            ManageProductsForm manageProductsForm = new ManageProductsForm();
-                            manageProductsForm.Show();
-                            this.Hide();
+                            if(account.Role=="Admin")
+                            {
+                                ManageProductsForm manageProductsForm = new ManageProductsForm();
+                                manageProductsForm.Show();
+                                this.Hide();
+                            }
+                            if(account.Role== "User")
+                            {
+                                UserManageProduct userManageProductForm = new UserManageProduct();
+                                userManageProductForm.Show();
+                                this.Hide();
+                            }
                         }
                         else
                         {
