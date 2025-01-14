@@ -47,12 +47,12 @@ namespace FInal_Project
         {
             string search = UsernameTextBox.Text;
             bool found = false;
-            using(ProductDbContext db = new ProductDbContext())
+            using (ProductDbContext db = new ProductDbContext())
             {
-                DbSet<Account> accounts= db.Accounts;
+                DbSet<Account> accounts = db.Accounts;
                 foreach (Account account in accounts)
                 {
-                    if(account.Username == search)
+                    if (account.Username == search)
                     {
                         found = true;
                         SHA256 sHA256 = SHA256.Create();
@@ -63,12 +63,21 @@ namespace FInal_Project
                         {
                             sb.Append(b.ToString("x2")); // se transforma fiecare bit in hexa pe 2 caractere - "x2"
                         }
-                        string pass= sb.ToString();
-                        if(pass == account.Password)
+                        string pass = sb.ToString();
+                        if (pass == account.Password)
                         {
-                            ManageProductsForm manageProductsForm = new ManageProductsForm();
-                            manageProductsForm.Show();
-                            this.Hide();
+                            if (account.Role == "Admin")
+                            {
+                                ManageProductsForm manageProductsForm = new ManageProductsForm();
+                                manageProductsForm.Show();
+                                this.Hide();
+                            }
+                            if (account.Role == "User")
+                            {
+                                UserManageProduct userManageProductForm = new UserManageProduct();
+                                userManageProductForm.Show();
+                                this.Hide();
+                            }
                         }
                         else
                         {
