@@ -68,6 +68,7 @@
             this.ProductGridView.RowTemplate.Height = 33;
             this.ProductGridView.Size = new System.Drawing.Size(1679, 383);
             this.ProductGridView.TabIndex = 0;
+            this.ProductGridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.ProductGridView_CellContentClick);
             // 
             // menuStrip1
             // 
@@ -77,7 +78,7 @@
             this.menuToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(1900, 40);
+            this.menuStrip1.Size = new System.Drawing.Size(1900, 48);
             this.menuStrip1.TabIndex = 1;
             this.menuStrip1.Text = "menuStrip1";
             // 

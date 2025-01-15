@@ -196,5 +196,68 @@ namespace FInal_Project
                 }
             }
         }
+
+        private void ProductGridView_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex >= 0 && ProductGridView.Columns[e.ColumnIndex] is DataGridViewButtonColumn)
+            {
+                SellProduct(e);
+            }
+        }
+
+        public void SellProduct(DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex >= 0)
+            {
+                int productID = Convert.ToInt32(ProductGridView.Rows[e.RowIndex].Cells["ProductID_Column"].Value);
+                Console.WriteLine(productID);
+                using (ProductDbContext db = new ProductDbContext())
+                {
+                    DbSet<Product> products = db.Products;
+                    foreach (Product product in products)
+                    {
+                        if (Object.Equals(product.ProductID, productID))
+                        {
+                            SellProductForm SellProductForm = new SellProductForm();
+                            SellProductForm.ShowDialog();
+                            int Quantity = SellProductForm.quantity;
+                            Console.WriteLine("Cantitate: " + Quantity);
+                            if (Quantity == 0)
+                                return;
+                            else if (Quantity > product.Stock)
+                            {
+                                MessageBox.Show("Stoc insuficient");
+                            }
+                            else if (Quantity < product.Stock)
+                            {
+                                product.Stock = product.Stock - Quantity;
+                                MessageBox.Show("Ai cumparat cu succes " + Quantity + " bucati");
+
+                                DbSet<sellHistory> sells = db.sellsHistory;
+                                sellHistory sell = new sellHistory();
+                                sell.ProductID = product.ProductID;
+                                sell.ProductName = product.ProductName;
+                                sell.Stock = Quantity;
+                                db.sellsHistory.Add(sell);
+
+
+                            }
+                            else
+                            {
+                                db.Products.Remove(product);
+                                DbSet<sellHistory> sells = db.sellsHistory;
+                                sellHistory sell = new sellHistory();
+                                sell.ProductID = product.ProductID;
+                                sell.ProductName = product.ProductName;
+                                sell.Stock = Quantity;
+                                db.sellsHistory.Add(sell);
+                                MessageBox.Show("Ai vandut cu succes " + Quantity + " bucati");
+                            }
+                            db.SaveChanges();
+                        }
+                    }
+                }
+            }
+        }
     }
 }
