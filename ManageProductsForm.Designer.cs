@@ -29,19 +29,6 @@
         private void InitializeComponent()
         {
             this.ProductsGrid = new System.Windows.Forms.DataGridView();
-            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
-            this.menuToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.addProductToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.newProductToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.existingProducsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.sellsHistoryToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.SearchProductBox = new System.Windows.Forms.TextBox();
-            this.SearchProductButton = new System.Windows.Forms.Button();
-            this.RefreshButton = new System.Windows.Forms.Button();
-            this.CategoryComboBox = new System.Windows.Forms.ComboBox();
-            this.ChangeLanguageComboBox = new System.Windows.Forms.ComboBox();
-            this.ChangeLanguageLabel = new System.Windows.Forms.Label();
-            this.ChooseCategoryLabel = new System.Windows.Forms.Label();
             this.IDProductColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ProductColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ProductDescription = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -50,9 +37,22 @@
             this.StockColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.PriceColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.SellProductColumn = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.menuToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.addProductToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.newProductToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.existingProducsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.sellsHistoryToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.addCategoryToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.deleteCategoryToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.manageUsersToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.SearchProductBox = new System.Windows.Forms.TextBox();
+            this.SearchProductButton = new System.Windows.Forms.Button();
+            this.RefreshButton = new System.Windows.Forms.Button();
+            this.CategoryComboBox = new System.Windows.Forms.ComboBox();
+            this.ChangeLanguageComboBox = new System.Windows.Forms.ComboBox();
+            this.ChangeLanguageLabel = new System.Windows.Forms.Label();
+            this.ChooseCategoryLabel = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.ProductsGrid)).BeginInit();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -78,6 +78,71 @@
             this.ProductsGrid.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.ProductsGrid_CellContentClick);
             this.ProductsGrid.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.ProductsGrid_CellDoubleClick);
             // 
+            // IDProductColumn
+            // 
+            this.IDProductColumn.HeaderText = "Product ID";
+            this.IDProductColumn.MinimumWidth = 10;
+            this.IDProductColumn.Name = "IDProductColumn";
+            this.IDProductColumn.ReadOnly = true;
+            this.IDProductColumn.Width = 45;
+            // 
+            // ProductColumn
+            // 
+            this.ProductColumn.HeaderText = "Products";
+            this.ProductColumn.MinimumWidth = 10;
+            this.ProductColumn.Name = "ProductColumn";
+            this.ProductColumn.ReadOnly = true;
+            this.ProductColumn.Width = 200;
+            // 
+            // ProductDescription
+            // 
+            this.ProductDescription.HeaderText = "Description";
+            this.ProductDescription.MinimumWidth = 10;
+            this.ProductDescription.Name = "ProductDescription";
+            this.ProductDescription.ReadOnly = true;
+            this.ProductDescription.Width = 200;
+            // 
+            // EnteringDateColumn
+            // 
+            this.EnteringDateColumn.HeaderText = "Entering Date";
+            this.EnteringDateColumn.MinimumWidth = 10;
+            this.EnteringDateColumn.Name = "EnteringDateColumn";
+            this.EnteringDateColumn.ReadOnly = true;
+            this.EnteringDateColumn.Width = 200;
+            // 
+            // ExpDateColumn
+            // 
+            this.ExpDateColumn.HeaderText = "Expiring Date";
+            this.ExpDateColumn.MinimumWidth = 10;
+            this.ExpDateColumn.Name = "ExpDateColumn";
+            this.ExpDateColumn.ReadOnly = true;
+            this.ExpDateColumn.Width = 200;
+            // 
+            // StockColumn
+            // 
+            this.StockColumn.HeaderText = "Stock";
+            this.StockColumn.MinimumWidth = 10;
+            this.StockColumn.Name = "StockColumn";
+            this.StockColumn.ReadOnly = true;
+            this.StockColumn.Width = 45;
+            // 
+            // PriceColumn
+            // 
+            this.PriceColumn.HeaderText = "Price";
+            this.PriceColumn.MinimumWidth = 10;
+            this.PriceColumn.Name = "PriceColumn";
+            this.PriceColumn.ReadOnly = true;
+            this.PriceColumn.Width = 45;
+            // 
+            // SellProductColumn
+            // 
+            this.SellProductColumn.HeaderText = "Sell Product";
+            this.SellProductColumn.MinimumWidth = 10;
+            this.SellProductColumn.Name = "SellProductColumn";
+            this.SellProductColumn.Text = "Sell";
+            this.SellProductColumn.UseColumnTextForButtonValue = true;
+            this.SellProductColumn.Width = 200;
+            // 
             // menuStrip1
             // 
             this.menuStrip1.GripMargin = new System.Windows.Forms.Padding(2, 2, 0, 2);
@@ -87,7 +152,7 @@
             this.manageUsersToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(1374, 40);
+            this.menuStrip1.Size = new System.Drawing.Size(1374, 42);
             this.menuStrip1.TabIndex = 1;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -108,7 +173,7 @@
             this.newProductToolStripMenuItem,
             this.existingProducsToolStripMenuItem});
             this.addProductToolStripMenuItem.Name = "addProductToolStripMenuItem";
-            this.addProductToolStripMenuItem.Size = new System.Drawing.Size(279, 44);
+            this.addProductToolStripMenuItem.Size = new System.Drawing.Size(359, 44);
             this.addProductToolStripMenuItem.Text = "Add Product";
             // 
             // newProductToolStripMenuItem
@@ -131,6 +196,26 @@
             this.sellsHistoryToolStripMenuItem.Size = new System.Drawing.Size(359, 44);
             this.sellsHistoryToolStripMenuItem.Text = "Sells History";
             this.sellsHistoryToolStripMenuItem.Click += new System.EventHandler(this.sellsHistoryToolStripMenuItem_Click);
+            // 
+            // addCategoryToolStripMenuItem
+            // 
+            this.addCategoryToolStripMenuItem.Name = "addCategoryToolStripMenuItem";
+            this.addCategoryToolStripMenuItem.Size = new System.Drawing.Size(359, 44);
+            this.addCategoryToolStripMenuItem.Text = "Add Category";
+            this.addCategoryToolStripMenuItem.Click += new System.EventHandler(this.addCategoryToolStripMenuItem_Click);
+            // 
+            // deleteCategoryToolStripMenuItem
+            // 
+            this.deleteCategoryToolStripMenuItem.Name = "deleteCategoryToolStripMenuItem";
+            this.deleteCategoryToolStripMenuItem.Size = new System.Drawing.Size(359, 44);
+            this.deleteCategoryToolStripMenuItem.Text = "Delete Category";
+            this.deleteCategoryToolStripMenuItem.Click += new System.EventHandler(this.deleteCategoryToolStripMenuItem_Click);
+            // 
+            // manageUsersToolStripMenuItem
+            // 
+            this.manageUsersToolStripMenuItem.Name = "manageUsersToolStripMenuItem";
+            this.manageUsersToolStripMenuItem.Size = new System.Drawing.Size(185, 38);
+            this.manageUsersToolStripMenuItem.Text = "Manage Users";
             // 
             // SearchProductBox
             // 
@@ -198,89 +283,6 @@
             this.ChooseCategoryLabel.Size = new System.Drawing.Size(179, 25);
             this.ChooseCategoryLabel.TabIndex = 8;
             this.ChooseCategoryLabel.Text = "Choose Category";
-            // 
-            // IDProductColumn
-            // 
-            this.IDProductColumn.HeaderText = "Product ID";
-            this.IDProductColumn.MinimumWidth = 10;
-            this.IDProductColumn.Name = "IDProductColumn";
-            this.IDProductColumn.ReadOnly = true;
-            this.IDProductColumn.Width = 45;
-            // 
-            // ProductColumn
-            // 
-            this.ProductColumn.HeaderText = "Products";
-            this.ProductColumn.MinimumWidth = 10;
-            this.ProductColumn.Name = "ProductColumn";
-            this.ProductColumn.ReadOnly = true;
-            this.ProductColumn.Width = 200;
-            // 
-            // ProductDescription
-            // 
-            this.ProductDescription.HeaderText = "Description";
-            this.ProductDescription.MinimumWidth = 10;
-            this.ProductDescription.Name = "ProductDescription";
-            this.ProductDescription.ReadOnly = true;
-            this.ProductDescription.Width = 200;
-            // 
-            // EnteringDateColumn
-            // 
-            this.EnteringDateColumn.HeaderText = "Entering Date";
-            this.EnteringDateColumn.MinimumWidth = 10;
-            this.EnteringDateColumn.Name = "EnteringDateColumn";
-            this.EnteringDateColumn.ReadOnly = true;
-            this.EnteringDateColumn.Width = 200;
-            // 
-            // ExpDateColumn
-            // 
-            this.ExpDateColumn.HeaderText = "Expiring Date";
-            this.ExpDateColumn.MinimumWidth = 10;
-            this.ExpDateColumn.Name = "ExpDateColumn";
-            this.ExpDateColumn.ReadOnly = true;
-            this.ExpDateColumn.Width = 200;
-            // 
-            // StockColumn
-            // 
-            this.StockColumn.HeaderText = "Stock";
-            this.StockColumn.MinimumWidth = 10;
-            this.StockColumn.Name = "StockColumn";
-            this.StockColumn.ReadOnly = true;
-            this.StockColumn.Width = 45;
-            // 
-            // PriceColumn
-            // 
-            this.PriceColumn.HeaderText = "Price";
-            this.PriceColumn.MinimumWidth = 10;
-            this.PriceColumn.Name = "PriceColumn";
-            this.PriceColumn.ReadOnly = true;
-            this.PriceColumn.Width = 45;
-            // 
-            // SellProductColumn
-            // 
-            this.SellProductColumn.HeaderText = "Sell Product";
-            this.SellProductColumn.MinimumWidth = 10;
-            this.SellProductColumn.Name = "SellProductColumn";
-            this.SellProductColumn.Text = "Sell";
-            this.SellProductColumn.UseColumnTextForButtonValue = true;
-            // 
-            // addCategoryToolStripMenuItem
-            // 
-            this.addCategoryToolStripMenuItem.Name = "addCategoryToolStripMenuItem";
-            this.addCategoryToolStripMenuItem.Size = new System.Drawing.Size(359, 44);
-            this.addCategoryToolStripMenuItem.Text = "Add Category";
-            this.addCategoryToolStripMenuItem.Click += new System.EventHandler(this.addCategoryToolStripMenuItem_Click);
-            // 
-            // deleteCategoryToolStripMenuItem
-            // 
-            this.deleteCategoryToolStripMenuItem.Name = "deleteCategoryToolStripMenuItem";
-            this.deleteCategoryToolStripMenuItem.Size = new System.Drawing.Size(359, 44);
-            this.deleteCategoryToolStripMenuItem.Text = "Delete Category";
-            // 
-            // manageUsersToolStripMenuItem
-            // 
-            this.manageUsersToolStripMenuItem.Name = "manageUsersToolStripMenuItem";
-            this.manageUsersToolStripMenuItem.Size = new System.Drawing.Size(185, 36);
-            this.manageUsersToolStripMenuItem.Text = "Manage Users";
             // 
             // ManageProductsForm
             // 

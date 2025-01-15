@@ -36,6 +36,7 @@ namespace FInal_Project
             PasswordLabel.Text = Languages.Strings.PasswordLabel;
             InfoRegLabel.Text = Languages.Strings.InfoRegLabel;
             RegisterLabel.Text = Languages.Strings.RegisterLabel;
+            ChangeLanguageform1Label.Text = Languages.Strings.ChangeLanguageLabel;
         }
 
         private void Form1_Load(object sender, EventArgs e)

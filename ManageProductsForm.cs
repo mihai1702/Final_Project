@@ -216,6 +216,7 @@ namespace FInal_Project
         {
             LoadProductsAsync();
             CategoryComboBox.Text="";
+            LoadCategoriesAsync();
         }
 
         private void CategoryComboBox_SelectedIndexChanged(object sender, EventArgs e)
@@ -272,7 +273,16 @@ namespace FInal_Project
 
         private void addCategoryToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            AddCategoryForm addCategoryForm= new AddCategoryForm();
+            addCategoryForm.Show();
+            this.Hide();
+        }
 
+        private void deleteCategoryToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            DeleteCategory deleteCategory = new DeleteCategory();
+            deleteCategory.Show();
+            this.Hide();
         }
     }
 }

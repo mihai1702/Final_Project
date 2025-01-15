@@ -36,6 +36,7 @@
             this.InfoRegLabel = new System.Windows.Forms.Label();
             this.RegisterLabel = new System.Windows.Forms.Label();
             this.ChooseLanguageBox = new System.Windows.Forms.ComboBox();
+            this.ChangeLanguageform1Label = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label1
@@ -84,7 +85,7 @@
             // InfoRegLabel
             // 
             this.InfoRegLabel.AutoSize = true;
-            this.InfoRegLabel.Location = new System.Drawing.Point(48, 480);
+            this.InfoRegLabel.Location = new System.Drawing.Point(50, 480);
             this.InfoRegLabel.Name = "InfoRegLabel";
             this.InfoRegLabel.Size = new System.Drawing.Size(363, 25);
             this.InfoRegLabel.TabIndex = 5;
@@ -94,7 +95,7 @@
             // 
             this.RegisterLabel.AutoSize = true;
             this.RegisterLabel.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.RegisterLabel.Location = new System.Drawing.Point(472, 480);
+            this.RegisterLabel.Location = new System.Drawing.Point(431, 480);
             this.RegisterLabel.Name = "RegisterLabel";
             this.RegisterLabel.Size = new System.Drawing.Size(92, 25);
             this.RegisterLabel.TabIndex = 6;
@@ -113,11 +114,21 @@
             this.ChooseLanguageBox.TabIndex = 7;
             this.ChooseLanguageBox.SelectedIndexChanged += new System.EventHandler(this.ChooseLanguageBox_SelectedIndexChanged);
             // 
+            // ChangeLanguageform1Label
+            // 
+            this.ChangeLanguageform1Label.AutoSize = true;
+            this.ChangeLanguageform1Label.Location = new System.Drawing.Point(343, 15);
+            this.ChangeLanguageform1Label.Name = "ChangeLanguageform1Label";
+            this.ChangeLanguageform1Label.Size = new System.Drawing.Size(189, 25);
+            this.ChangeLanguageform1Label.TabIndex = 8;
+            this.ChangeLanguageform1Label.Text = "Change Language";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(699, 514);
+            this.Controls.Add(this.ChangeLanguageform1Label);
             this.Controls.Add(this.ChooseLanguageBox);
             this.Controls.Add(this.RegisterLabel);
             this.Controls.Add(this.InfoRegLabel);
@@ -144,6 +155,7 @@
         private System.Windows.Forms.Label InfoRegLabel;
         private System.Windows.Forms.Label RegisterLabel;
         private System.Windows.Forms.ComboBox ChooseLanguageBox;
+        private System.Windows.Forms.Label ChangeLanguageform1Label;
     }
 }
 

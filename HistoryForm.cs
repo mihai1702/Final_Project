@@ -44,5 +44,32 @@ namespace FInal_Project
         {
 
         }
+
+        private void sellsHistoryDataGridView_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void SearchSellButton_Click(object sender, EventArgs e)
+        {
+            using (ProductDbContext db = new ProductDbContext())
+            {
+                DbSet<sellHistory> sells = db.sellsHistory;
+                sellsHistoryDataGridView.Rows.Clear();
+                foreach (sellHistory sell in sells)
+                {
+                    if (sell.ProductName.ToLower().Contains(SearchSellTextBox.Text.ToLower()))
+                    {
+                        sellsHistoryDataGridView.Rows.Add(
+                        sell.SellID,
+                        sell.ProductID,
+                        sell.ProductName,
+                        sell.Stock
+                        );
+                    }
+                }
+
+            }
+        }
     }
 }
