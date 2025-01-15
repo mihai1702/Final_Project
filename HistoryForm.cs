@@ -6,6 +6,7 @@ using System.Data.Entity;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -70,6 +71,22 @@ namespace FInal_Project
                 }
 
             }
+        }
+
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            Thread.CurrentThread.CurrentUICulture = new System.Globalization.CultureInfo(comboBox1.Text);
+            ApplyTranslation();
+        }
+        private void ApplyTranslation()
+        {
+            label1.Text = Languages.Strings.ChangeLanguageLabel;
+            SearchSellButton.Text=Languages.Strings.SearchProductButton;
+            SellIDColumn.HeaderText = Languages.Strings.SellIDColumn;
+            ProductIDColumn.HeaderText = Languages.Strings.IDProductColumn;
+            ProductNameColumn.HeaderText = Languages.Strings.ProductColumn;
+            SellStockColumn.HeaderText = Languages.Strings.SellStockColumn;
+
         }
     }
 }

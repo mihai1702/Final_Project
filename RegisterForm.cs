@@ -11,6 +11,7 @@ using System.Windows.Forms;
 using System.Security.Cryptography;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 using System.Reflection.Emit;
+using System.Threading;
 
 namespace FInal_Project
 {
@@ -81,6 +82,22 @@ namespace FInal_Project
                 
             }
             
+        }
+
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            Thread.CurrentThread.CurrentUICulture = new System.Globalization.CultureInfo(comboBox1.Text);
+            ApplyTranslation();
+        }
+        private void ApplyTranslation()
+        {
+            label1.Text = Languages.Strings.ChangeLanguageLabel;
+            Reg_Usename_Label.Text = Languages.Strings.NewUsernameLabel;
+            Reg_FirstName_Label.Text= Languages.Strings.NewFirstNameLabel;
+            Reg_LastName_Label.Text=Languages.Strings.NewLastNameLabel;
+            Reg_Password_Label.Text=Languages.Strings.PasswordLabel;
+            Confirm_Password_Label.Text=Languages.Strings.NewAccountConfirmPasswordLabel;
+            Register_Btn.Text = Languages.Strings.Register_Btn;
         }
     }
 }

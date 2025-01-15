@@ -7,6 +7,7 @@ using System.Drawing;
 using System.Linq;
 using System.Security.Cryptography;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -14,11 +15,11 @@ namespace FInal_Project
 {
     public partial class ChangePasswordUser : Form
     {
-        
+
         public ChangePasswordUser()
         {
             InitializeComponent();
-            
+
         }
 
         private void ChangePasswordUser_Load(object sender, EventArgs e)
@@ -73,6 +74,19 @@ namespace FInal_Project
                 }
                 db.SaveChanges();
             }
+        }
+
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            Thread.CurrentThread.CurrentUICulture = new System.Globalization.CultureInfo(comboBox1.Text);
+            ApplyTranslation();
+        }
+        private void ApplyTranslation()
+        {
+            label1.Text = Languages.Strings.ChangeLanguageLabel;
+            OldPasswordLabel.Text = Languages.Strings.OldPasswordLabel;
+            NewPasswordLabel.Text= Languages.Strings.NewPasswordLabel;
+            ChangePasswordBtn.Text = Languages.Strings.ChangePasswordBtn;
         }
     }
 }

@@ -7,6 +7,7 @@ using System.Drawing;
 using System.Linq;
 using System.Security.Cryptography;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -66,6 +67,21 @@ namespace FInal_Project
                 }
                 db.SaveChanges();
             }
+        }
+
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            Thread.CurrentThread.CurrentUICulture = new System.Globalization.CultureInfo(comboBox1.Text);
+            ApplyTranslation();
+        }
+        private void ApplyTranslation()
+        {
+            label1.Text=Languages.Strings.ChangeLanguageLabel;
+            UsernameUpdateInfoLabel.Text = Languages.Strings.UsernameUpdateInfoLabel;
+            PasswordUpdateInfoLabel.Text = Languages.Strings.PasswordUpdateInfoLabel;
+            NewFirstNameLabel.Text = Languages.Strings.NewFirstNameLabel;
+            NewLastNameLabel.Text = Languages.Strings.NewLastNameLabel;
+            UpdateInfoBtn.Text = Languages.Strings.UpdateInfoBtn;
         }
     }
 }

@@ -18,8 +18,12 @@ namespace FInal_Project
         public Form1()
         {
             InitializeComponent();
+            this.FormClosing += new FormClosingEventHandler(LogIn_FormClosing);
         }
-
+        private void LogIn_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Application.Exit();
+        }
         private void RegisterLabel_Click(object sender, EventArgs e)
         {
             RegisterForm registerForm = new RegisterForm();

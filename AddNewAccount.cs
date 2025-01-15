@@ -7,6 +7,7 @@ using System.Drawing;
 using System.Linq;
 using System.Security.Cryptography;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -80,6 +81,22 @@ namespace FInal_Project
                 }
 
             }
+        }
+
+        private void chLangAddNewAccTextBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            Thread.CurrentThread.CurrentUICulture = new System.Globalization.CultureInfo(chLangAddNewAccTextBox.Text);
+            ApplyTranslation();
+        }
+        private void ApplyTranslation()
+        {
+            chLangAddNewAccountLabel.Text = Languages.Strings.ChangeLanguageLabel;
+            NewUsernameLabel.Text = Languages.Strings.NewUsernameLabel;
+            NewFirstNameLabel.Text = Languages.Strings.NewFirstNameLabel;
+            NewLastNameLabel.Text = Languages.Strings.NewLastNameLabel;
+            NewAccountPasswordLabel.Text= Languages.Strings.NewAccountPasswordLabel;
+            NewAccountConfirmPasswordLabel.Text=Languages.Strings.NewAccountConfirmPasswordLabel;
+            AddAccountBtn.Text = Languages.Strings.AddAccountBtn;
         }
     }
 }

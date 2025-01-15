@@ -61,7 +61,16 @@ namespace Languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Add.
+        ///   Looks up a localized string similar to Add Account.
+        /// </summary>
+        public static string AddAccountBtn {
+            get {
+                return ResourceManager.GetString("AddAccountBtn", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Add Product.
         /// </summary>
         public static string AddExistingProductButton {
             get {
@@ -84,6 +93,24 @@ namespace Languages {
         public static string addProductToolStripMenuItem {
             get {
                 return ResourceManager.GetString("addProductToolStripMenuItem", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Add Account.
+        /// </summary>
+        public static string addUserToolStripMenuItem {
+            get {
+                return ResourceManager.GetString("addUserToolStripMenuItem", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Buy.
+        /// </summary>
+        public static string BuyColumn {
+            get {
+                return ResourceManager.GetString("BuyColumn", resourceCulture);
             }
         }
         
@@ -115,6 +142,24 @@ namespace Languages {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Change Password.
+        /// </summary>
+        public static string ChangePasswordBtn {
+            get {
+                return ResourceManager.GetString("ChangePasswordBtn", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Change Password.
+        /// </summary>
+        public static string changePasswordToolStripMenuItem {
+            get {
+                return ResourceManager.GetString("changePasswordToolStripMenuItem", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Choose category.
         /// </summary>
         public static string ChooseCategoryLabel {
@@ -129,6 +174,15 @@ namespace Languages {
         public static string ChooseLanguageNewProductLabel {
             get {
                 return ResourceManager.GetString("ChooseLanguageNewProductLabel", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Delete Account.
+        /// </summary>
+        public static string deleteAccountToolStripMenuItem {
+            get {
+                return ResourceManager.GetString("deleteAccountToolStripMenuItem", resourceCulture);
             }
         }
         
@@ -205,11 +259,83 @@ namespace Languages {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Log Out.
+        /// </summary>
+        public static string logOutToolStripMenuItem {
+            get {
+                return ResourceManager.GetString("logOutToolStripMenuItem", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Manage Users.
+        /// </summary>
+        public static string manageUsersToolStripMenuItem {
+            get {
+                return ResourceManager.GetString("manageUsersToolStripMenuItem", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Menu.
         /// </summary>
         public static string menuToolStripMenuItem {
             get {
                 return ResourceManager.GetString("menuToolStripMenuItem", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Confirm Password.
+        /// </summary>
+        public static string NewAccountConfirmPasswordLabel {
+            get {
+                return ResourceManager.GetString("NewAccountConfirmPasswordLabel", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Password.
+        /// </summary>
+        public static string NewAccountPasswordLabel {
+            get {
+                return ResourceManager.GetString("NewAccountPasswordLabel", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to New Admin.
+        /// </summary>
+        public static string newAdminToolStripMenuItem {
+            get {
+                return ResourceManager.GetString("newAdminToolStripMenuItem", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to First Name.
+        /// </summary>
+        public static string NewFirstNameLabel {
+            get {
+                return ResourceManager.GetString("NewFirstNameLabel", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Last Name.
+        /// </summary>
+        public static string NewLastNameLabel {
+            get {
+                return ResourceManager.GetString("NewLastNameLabel", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Enter New Password.
+        /// </summary>
+        public static string NewPasswordLabel {
+            get {
+                return ResourceManager.GetString("NewPasswordLabel", resourceCulture);
             }
         }
         
@@ -223,11 +349,47 @@ namespace Languages {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Username.
+        /// </summary>
+        public static string NewUsernameLabel {
+            get {
+                return ResourceManager.GetString("NewUsernameLabel", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to New User.
+        /// </summary>
+        public static string newUserToolStripMenuItem {
+            get {
+                return ResourceManager.GetString("newUserToolStripMenuItem", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Enter old Password.
+        /// </summary>
+        public static string OldPasswordLabel {
+            get {
+                return ResourceManager.GetString("OldPasswordLabel", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Password:.
         /// </summary>
         public static string PasswordLabel {
             get {
                 return ResourceManager.GetString("PasswordLabel", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Enter Password.
+        /// </summary>
+        public static string PasswordUpdateInfoLabel {
+            get {
+                return ResourceManager.GetString("PasswordUpdateInfoLabel", resourceCulture);
             }
         }
         
@@ -313,6 +475,15 @@ namespace Languages {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to REGISTER.
+        /// </summary>
+        public static string Register_Btn {
+            get {
+                return ResourceManager.GetString("Register_Btn", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Register.
         /// </summary>
         public static string RegisterLabel {
@@ -327,6 +498,15 @@ namespace Languages {
         public static string SearchProductButton {
             get {
                 return ResourceManager.GetString("SearchProductButton", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Sell ID.
+        /// </summary>
+        public static string SellIDColumn {
+            get {
+                return ResourceManager.GetString("SellIDColumn", resourceCulture);
             }
         }
         
@@ -349,6 +529,15 @@ namespace Languages {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Sell Stock.
+        /// </summary>
+        public static string SellStockColumn {
+            get {
+                return ResourceManager.GetString("SellStockColumn", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Stock.
         /// </summary>
         public static string StockColumn {
@@ -363,6 +552,33 @@ namespace Languages {
         public static string StockLabel {
             get {
                 return ResourceManager.GetString("StockLabel", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Update Info.
+        /// </summary>
+        public static string UpdateInfoBtn {
+            get {
+                return ResourceManager.GetString("UpdateInfoBtn", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Update info.
+        /// </summary>
+        public static string updateInfoToolStripMenuItem {
+            get {
+                return ResourceManager.GetString("updateInfoToolStripMenuItem", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Enter Username.
+        /// </summary>
+        public static string UsernameUpdateInfoLabel {
+            get {
+                return ResourceManager.GetString("UsernameUpdateInfoLabel", resourceCulture);
             }
         }
     }

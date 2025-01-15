@@ -38,6 +38,7 @@
             this.UserRefreshBtn = new System.Windows.Forms.Button();
             this.UserSearchProductBtn = new System.Windows.Forms.Button();
             this.UserSearchProductTxt = new System.Windows.Forms.TextBox();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.ProductID_Column = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ProductName_Column = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ProductDescription_Column = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -46,6 +47,7 @@
             this.Stock_Column = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Price_Column = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Buy_Column = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.ChLangUserManageLabel = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.ProductGridView)).BeginInit();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -62,23 +64,22 @@
             this.Stock_Column,
             this.Price_Column,
             this.Buy_Column});
-            this.ProductGridView.Location = new System.Drawing.Point(95, 276);
+            this.ProductGridView.Location = new System.Drawing.Point(134, 233);
             this.ProductGridView.Name = "ProductGridView";
             this.ProductGridView.RowHeadersWidth = 82;
             this.ProductGridView.RowTemplate.Height = 33;
-            this.ProductGridView.Size = new System.Drawing.Size(1679, 383);
+            this.ProductGridView.Size = new System.Drawing.Size(1079, 200);
             this.ProductGridView.TabIndex = 0;
             this.ProductGridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.ProductGridView_CellContentClick);
             // 
             // menuStrip1
             // 
-            this.menuStrip1.GripMargin = new System.Windows.Forms.Padding(2, 2, 0, 2);
             this.menuStrip1.ImageScalingSize = new System.Drawing.Size(32, 32);
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.menuToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(1900, 48);
+            this.menuStrip1.Size = new System.Drawing.Size(1354, 40);
             this.menuStrip1.TabIndex = 1;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -95,28 +96,28 @@
             // changePasswordToolStripMenuItem
             // 
             this.changePasswordToolStripMenuItem.Name = "changePasswordToolStripMenuItem";
-            this.changePasswordToolStripMenuItem.Size = new System.Drawing.Size(333, 44);
+            this.changePasswordToolStripMenuItem.Size = new System.Drawing.Size(359, 44);
             this.changePasswordToolStripMenuItem.Text = "Change Password";
             this.changePasswordToolStripMenuItem.Click += new System.EventHandler(this.changePasswordToolStripMenuItem_Click_1);
             // 
             // updateInfoToolStripMenuItem
             // 
             this.updateInfoToolStripMenuItem.Name = "updateInfoToolStripMenuItem";
-            this.updateInfoToolStripMenuItem.Size = new System.Drawing.Size(333, 44);
+            this.updateInfoToolStripMenuItem.Size = new System.Drawing.Size(359, 44);
             this.updateInfoToolStripMenuItem.Text = "Update Info";
             this.updateInfoToolStripMenuItem.Click += new System.EventHandler(this.updateInfoToolStripMenuItem_Click_1);
             // 
             // logOutToolStripMenuItem
             // 
             this.logOutToolStripMenuItem.Name = "logOutToolStripMenuItem";
-            this.logOutToolStripMenuItem.Size = new System.Drawing.Size(333, 44);
+            this.logOutToolStripMenuItem.Size = new System.Drawing.Size(359, 44);
             this.logOutToolStripMenuItem.Text = "Log Out";
             this.logOutToolStripMenuItem.Click += new System.EventHandler(this.logOutToolStripMenuItem_Click_1);
             // 
             // UserProductComboBox
             // 
             this.UserProductComboBox.FormattingEnabled = true;
-            this.UserProductComboBox.Location = new System.Drawing.Point(281, 201);
+            this.UserProductComboBox.Location = new System.Drawing.Point(230, 186);
             this.UserProductComboBox.Name = "UserProductComboBox";
             this.UserProductComboBox.Size = new System.Drawing.Size(281, 33);
             this.UserProductComboBox.TabIndex = 2;
@@ -124,7 +125,7 @@
             // 
             // UserRefreshBtn
             // 
-            this.UserRefreshBtn.Location = new System.Drawing.Point(95, 201);
+            this.UserRefreshBtn.Location = new System.Drawing.Point(78, 175);
             this.UserRefreshBtn.Name = "UserRefreshBtn";
             this.UserRefreshBtn.Size = new System.Drawing.Size(146, 52);
             this.UserRefreshBtn.TabIndex = 3;
@@ -134,7 +135,7 @@
             // 
             // UserSearchProductBtn
             // 
-            this.UserSearchProductBtn.Location = new System.Drawing.Point(1635, 201);
+            this.UserSearchProductBtn.Location = new System.Drawing.Point(1110, 169);
             this.UserSearchProductBtn.Name = "UserSearchProductBtn";
             this.UserSearchProductBtn.Size = new System.Drawing.Size(139, 52);
             this.UserSearchProductBtn.TabIndex = 4;
@@ -144,11 +145,23 @@
             // 
             // UserSearchProductTxt
             // 
-            this.UserSearchProductTxt.Location = new System.Drawing.Point(1267, 201);
+            this.UserSearchProductTxt.Location = new System.Drawing.Point(823, 180);
             this.UserSearchProductTxt.Name = "UserSearchProductTxt";
-            this.UserSearchProductTxt.Size = new System.Drawing.Size(320, 31);
+            this.UserSearchProductTxt.Size = new System.Drawing.Size(281, 31);
             this.UserSearchProductTxt.TabIndex = 5;
             this.UserSearchProductTxt.TextChanged += new System.EventHandler(this.UserSearchProductBtn_Click);
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Items.AddRange(new object[] {
+            "en",
+            "ro"});
+            this.comboBox1.Location = new System.Drawing.Point(1210, 55);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(121, 33);
+            this.comboBox1.TabIndex = 6;
+            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
             // ProductID_Column
             // 
@@ -156,7 +169,7 @@
             this.ProductID_Column.MinimumWidth = 10;
             this.ProductID_Column.Name = "ProductID_Column";
             this.ProductID_Column.ReadOnly = true;
-            this.ProductID_Column.Width = 200;
+            this.ProductID_Column.Width = 45;
             // 
             // ProductName_Column
             // 
@@ -196,7 +209,7 @@
             this.Stock_Column.MinimumWidth = 10;
             this.Stock_Column.Name = "Stock_Column";
             this.Stock_Column.ReadOnly = true;
-            this.Stock_Column.Width = 200;
+            this.Stock_Column.Width = 45;
             // 
             // Price_Column
             // 
@@ -204,7 +217,7 @@
             this.Price_Column.MinimumWidth = 10;
             this.Price_Column.Name = "Price_Column";
             this.Price_Column.ReadOnly = true;
-            this.Price_Column.Width = 200;
+            this.Price_Column.Width = 45;
             // 
             // Buy_Column
             // 
@@ -214,13 +227,23 @@
             this.Buy_Column.ReadOnly = true;
             this.Buy_Column.Text = "Buy";
             this.Buy_Column.UseColumnTextForButtonValue = true;
-            this.Buy_Column.Width = 200;
+            this.Buy_Column.Width = 60;
+            // 
+            // ChLangUserManageLabel
+            // 
+            this.ChLangUserManageLabel.AutoSize = true;
+            this.ChLangUserManageLabel.Location = new System.Drawing.Point(1015, 58);
+            this.ChLangUserManageLabel.Name = "ChLangUserManageLabel";
+            this.ChLangUserManageLabel.Size = new System.Drawing.Size(189, 25);
+            this.ChLangUserManageLabel.TabIndex = 7;
+            this.ChLangUserManageLabel.Text = "Change Language";
             // 
             // UserManageProduct
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1900, 837);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
+            this.ClientSize = new System.Drawing.Size(1354, 628);
+            this.Controls.Add(this.ChLangUserManageLabel);
+            this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.UserSearchProductTxt);
             this.Controls.Add(this.UserSearchProductBtn);
             this.Controls.Add(this.UserRefreshBtn);
@@ -251,6 +274,7 @@
         private System.Windows.Forms.Button UserRefreshBtn;
         private System.Windows.Forms.Button UserSearchProductBtn;
         private System.Windows.Forms.TextBox UserSearchProductTxt;
+        private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.DataGridViewTextBoxColumn ProductID_Column;
         private System.Windows.Forms.DataGridViewTextBoxColumn ProductName_Column;
         private System.Windows.Forms.DataGridViewTextBoxColumn ProductDescription_Column;
@@ -259,5 +283,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Stock_Column;
         private System.Windows.Forms.DataGridViewTextBoxColumn Price_Column;
         private System.Windows.Forms.DataGridViewButtonColumn Buy_Column;
+        private System.Windows.Forms.Label ChLangUserManageLabel;
     }
 }

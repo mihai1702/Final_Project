@@ -33,6 +33,8 @@
             this.OldPasswordTxt = new System.Windows.Forms.TextBox();
             this.NewPasswordTxtBox = new System.Windows.Forms.TextBox();
             this.ChangePasswordBtn = new System.Windows.Forms.Button();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // OldPasswordLabel
@@ -77,11 +79,34 @@
             this.ChangePasswordBtn.UseVisualStyleBackColor = true;
             this.ChangePasswordBtn.Click += new System.EventHandler(this.ChangePasswordBtn_Click_1);
             // 
+            // comboBox1
+            // 
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Items.AddRange(new object[] {
+            "en",
+            "ro"});
+            this.comboBox1.Location = new System.Drawing.Point(543, 12);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(121, 33);
+            this.comboBox1.TabIndex = 7;
+            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(350, 15);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(189, 25);
+            this.label1.TabIndex = 8;
+            this.label1.Text = "Change Language";
+            // 
             // ChangePasswordUser
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(676, 456);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.ChangePasswordBtn);
             this.Controls.Add(this.NewPasswordTxtBox);
             this.Controls.Add(this.OldPasswordTxt);
@@ -101,5 +126,7 @@
         private System.Windows.Forms.TextBox OldPasswordTxt;
         private System.Windows.Forms.TextBox NewPasswordTxtBox;
         private System.Windows.Forms.Button ChangePasswordBtn;
+        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.Label label1;
     }
 }

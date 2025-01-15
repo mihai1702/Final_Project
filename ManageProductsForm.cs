@@ -61,6 +61,17 @@ namespace FInal_Project
                                 sell.Stock = Quantity;
                                 db.sellsHistory.Add(sell);
 
+                                try
+                                {
+                                    string filepath = "sells.xml";
+                                    XMLcommands.Class1.SaveToXML(filepath, sell.ProductID, sell.ProductName, sell.Stock);
+                                    MessageBox.Show("Produs adăugat!");
+                                }
+                                catch (Exception ex)
+                                {
+                                    MessageBox.Show(ex.Message);
+                                }
+
 
                             }
                             else
@@ -90,10 +101,8 @@ namespace FInal_Project
         {
             SellProduct(e);
         }
-        public async Task LoadProductsAsync()
+        public void LoadProductsAsync()
         {
-            await Task.Run(() =>
-            {
                 using (ProductDbContext db = new ProductDbContext())
                 {
                     try
@@ -108,8 +117,7 @@ namespace FInal_Project
 
                     DbSet<Product> products = db.Products;
 
-                    ProductsGrid.Invoke(new Action(() =>
-                    {
+                    
                         ProductsGrid.Rows.Clear();
                         foreach (Product product in products)
                         {
@@ -123,9 +131,7 @@ namespace FInal_Project
                                 product.Price
                             );
                         }
-                    }));
                 }
-            });
         }
         public void LoadProductsBasedOnCategory()
         {
@@ -262,6 +268,15 @@ namespace FInal_Project
             StockColumn.HeaderText = Languages.Strings.StockColumn;
             PriceColumn.HeaderText = Languages.Strings.PriceColumn;
             SellProductColumn.HeaderText = Languages.Strings.SellProductColumn;
+            manageUsersToolStripMenuItem.Text= Languages.Strings.manageUsersToolStripMenuItem;
+            addUserToolStripMenuItem.Text = Languages.Strings.addUserToolStripMenuItem;
+            newAdminToolStripMenuItem.Text=Languages.Strings.newAdminToolStripMenuItem;
+            newUserToolStripMenuItem.Text=Languages.Strings .newUserToolStripMenuItem;
+            deleteAccountToolStripMenuItem.Text=Languages.Strings.deleteAccountToolStripMenuItem;
+            changePasswordToolStripMenuItem.Text=Languages.Strings.changePasswordToolStripMenuItem;
+            updateInfoToolStripMenuItem.Text=Languages.Strings .updateInfoToolStripMenuItem;
+            logOutToolStripMenuItem.Text=Languages.Strings.logOutToolStripMenuItem;
+
         }
 
         private void sellsHistoryToolStripMenuItem_Click(object sender, EventArgs e)

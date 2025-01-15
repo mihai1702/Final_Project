@@ -6,6 +6,7 @@ using System.Data.Entity;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -17,8 +18,13 @@ namespace FInal_Project
         {
             InitializeComponent();
             LoadProductsAsync();
+            LoadCategoriesAsync();
+            this.FormClosing += new FormClosingEventHandler(ManageProducts_FormClosing);
         }
-
+        private void ManageProducts_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Application.Exit();
+        }
         public async Task LoadProductsAsync()
         {
             await Task.Run(() =>
@@ -126,7 +132,7 @@ namespace FInal_Project
         {
             Form1 form1 = new Form1();
             form1.Show();
-            this.Close();
+            this.Hide();
         }
 
         private void UserSearchProductBtn_Click(object sender, EventArgs e)
@@ -258,6 +264,30 @@ namespace FInal_Project
                     }
                 }
             }
+        }
+
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            Thread.CurrentThread.CurrentUICulture = new System.Globalization.CultureInfo(comboBox1.Text);
+            ApplyTranslation();
+        }
+        private void ApplyTranslation()
+        {
+            ChLangUserManageLabel.Text=Languages.Strings.ChangeLanguageLabel;
+            menuToolStripMenuItem.Text = Languages.Strings.menuToolStripMenuItem;
+            changePasswordToolStripMenuItem.Text=Languages.Strings.changePasswordToolStripMenuItem;
+            updateInfoToolStripMenuItem.Text= Languages.Strings.updateInfoToolStripMenuItem;
+            logOutToolStripMenuItem.Text=Languages.Strings.logOutToolStripMenuItem;
+            UserRefreshBtn.Text=Languages.Strings.RefreshButton;
+            UserSearchProductBtn.Text=Languages.Strings.SearchProductButton;
+            ProductID_Column.HeaderText = Languages.Strings.IDProductColumn;
+            ProductName_Column.HeaderText = Languages.Strings.ProductColumn;
+            ProductDescription_Column.HeaderText= Languages.Strings.ProductDescription;
+            EnteringDate_Column.HeaderText=Languages.Strings.EnteringDateColumn;
+            ExpiringDate_Column.HeaderText = Languages.Strings.ExpDateColumn;
+            Stock_Column.HeaderText = Languages.Strings.StockColumn;
+            Price_Column.HeaderText = Languages.Strings.PriceColumn;
+            Buy_Column.HeaderText = Languages.Strings.BuyColumn;
         }
     }
 }

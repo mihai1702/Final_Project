@@ -117,14 +117,23 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="AddAccountBtn" xml:space="preserve">
+    <value>Add Account</value>
+  </data>
   <data name="AddExistingProductButton" xml:space="preserve">
-    <value>Add</value>
+    <value>Add Product</value>
   </data>
   <data name="AddProductButton" xml:space="preserve">
     <value>Add</value>
   </data>
   <data name="addProductToolStripMenuItem" xml:space="preserve">
     <value>Add Product</value>
+  </data>
+  <data name="addUserToolStripMenuItem" xml:space="preserve">
+    <value>Add Account</value>
+  </data>
+  <data name="BuyColumn" xml:space="preserve">
+    <value>Buy</value>
   </data>
   <data name="CategoryLabel" xml:space="preserve">
     <value>Category</value>
@@ -135,11 +144,20 @@
   <data name="ChangeLanguageLabel" xml:space="preserve">
     <value>Change language</value>
   </data>
+  <data name="ChangePasswordBtn" xml:space="preserve">
+    <value>Change Password</value>
+  </data>
+  <data name="changePasswordToolStripMenuItem" xml:space="preserve">
+    <value>Change Password</value>
+  </data>
   <data name="ChooseCategoryLabel" xml:space="preserve">
     <value>Choose category</value>
   </data>
   <data name="ChooseLanguageNewProductLabel" xml:space="preserve">
     <value>Choose Language</value>
+  </data>
+  <data name="deleteAccountToolStripMenuItem" xml:space="preserve">
+    <value>Delete Account</value>
   </data>
   <data name="EnteringDateColumn" xml:space="preserve">
     <value>Entering Date</value>
@@ -165,14 +183,50 @@
   <data name="LogInButton" xml:space="preserve">
     <value>Log In</value>
   </data>
+  <data name="logOutToolStripMenuItem" xml:space="preserve">
+    <value>Log Out</value>
+  </data>
+  <data name="manageUsersToolStripMenuItem" xml:space="preserve">
+    <value>Manage Users</value>
+  </data>
   <data name="menuToolStripMenuItem" xml:space="preserve">
     <value>Menu</value>
+  </data>
+  <data name="NewAccountConfirmPasswordLabel" xml:space="preserve">
+    <value>Confirm Password</value>
+  </data>
+  <data name="NewAccountPasswordLabel" xml:space="preserve">
+    <value>Password</value>
+  </data>
+  <data name="newAdminToolStripMenuItem" xml:space="preserve">
+    <value>New Admin</value>
+  </data>
+  <data name="NewFirstNameLabel" xml:space="preserve">
+    <value>First Name</value>
+  </data>
+  <data name="NewLastNameLabel" xml:space="preserve">
+    <value>Last Name</value>
+  </data>
+  <data name="NewPasswordLabel" xml:space="preserve">
+    <value>Enter New Password</value>
   </data>
   <data name="newProductToolStripMenuItem" xml:space="preserve">
     <value>New Product</value>
   </data>
+  <data name="NewUsernameLabel" xml:space="preserve">
+    <value>Username</value>
+  </data>
+  <data name="newUserToolStripMenuItem" xml:space="preserve">
+    <value>New User</value>
+  </data>
+  <data name="OldPasswordLabel" xml:space="preserve">
+    <value>Enter old Password</value>
+  </data>
   <data name="PasswordLabel" xml:space="preserve">
     <value>Password:</value>
+  </data>
+  <data name="PasswordUpdateInfoLabel" xml:space="preserve">
+    <value>Enter Password</value>
   </data>
   <data name="PriceColumn" xml:space="preserve">
     <value>Price</value>
@@ -204,8 +258,14 @@
   <data name="RegisterLabel" xml:space="preserve">
     <value>Register</value>
   </data>
+  <data name="Register_Btn" xml:space="preserve">
+    <value>REGISTER</value>
+  </data>
   <data name="SearchProductButton" xml:space="preserve">
     <value>Search</value>
+  </data>
+  <data name="SellIDColumn" xml:space="preserve">
+    <value>Sell ID</value>
   </data>
   <data name="SellProductColumn" xml:space="preserve">
     <value>Sell Product</value>
@@ -213,10 +273,22 @@
   <data name="sellsHistoryToolStripMenuItem" xml:space="preserve">
     <value>Sells history</value>
   </data>
+  <data name="SellStockColumn" xml:space="preserve">
+    <value>Sell Stock</value>
+  </data>
   <data name="StockColumn" xml:space="preserve">
     <value>Stock</value>
   </data>
   <data name="StockLabel" xml:space="preserve">
     <value>Stock</value>
+  </data>
+  <data name="UpdateInfoBtn" xml:space="preserve">
+    <value>Update Info</value>
+  </data>
+  <data name="updateInfoToolStripMenuItem" xml:space="preserve">
+    <value>Update info</value>
+  </data>
+  <data name="UsernameUpdateInfoLabel" xml:space="preserve">
+    <value>Enter Username</value>
   </data>
 </root>

@@ -37,6 +37,8 @@
             this.NewLastNameTxt = new System.Windows.Forms.TextBox();
             this.NewFirstNameTxt = new System.Windows.Forms.TextBox();
             this.UpdateInfoBtn = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
             // UsernameUpdateInfoLabel
@@ -113,11 +115,34 @@
             this.UpdateInfoBtn.UseVisualStyleBackColor = true;
             this.UpdateInfoBtn.Click += new System.EventHandler(this.UpdateInfoBtn_Click_1);
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(472, 20);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(189, 25);
+            this.label1.TabIndex = 9;
+            this.label1.Text = "Change Language";
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Items.AddRange(new object[] {
+            "en",
+            "ro"});
+            this.comboBox1.Location = new System.Drawing.Point(667, 12);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(121, 33);
+            this.comboBox1.TabIndex = 10;
+            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
+            // 
             // UpdateInfoUser
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.UpdateInfoBtn);
             this.Controls.Add(this.NewFirstNameTxt);
             this.Controls.Add(this.NewLastNameTxt);
@@ -146,5 +171,7 @@
         private System.Windows.Forms.TextBox NewLastNameTxt;
         private System.Windows.Forms.TextBox NewFirstNameTxt;
         private System.Windows.Forms.Button UpdateInfoBtn;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.ComboBox comboBox1;
     }
 }

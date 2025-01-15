@@ -39,6 +39,8 @@
             this.NewAccountPasswordTxt = new System.Windows.Forms.TextBox();
             this.NewAccountConfirmPasswordTxt = new System.Windows.Forms.TextBox();
             this.AddAccountBtn = new System.Windows.Forms.Button();
+            this.chLangAddNewAccountLabel = new System.Windows.Forms.Label();
+            this.chLangAddNewAccTextBox = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
             // NewUsernameLabel
@@ -57,7 +59,7 @@
             this.NewFirstNameLabel.Name = "NewFirstNameLabel";
             this.NewFirstNameLabel.Size = new System.Drawing.Size(179, 25);
             this.NewFirstNameLabel.TabIndex = 1;
-            this.NewFirstNameLabel.Text = "Enter Frist Name:";
+            this.NewFirstNameLabel.Text = "Enter First Name:";
             // 
             // NewLastNameLabel
             // 
@@ -131,11 +133,34 @@
             this.AddAccountBtn.UseVisualStyleBackColor = true;
             this.AddAccountBtn.Click += new System.EventHandler(this.AddAccountBtn_Click);
             // 
+            // chLangAddNewAccountLabel
+            // 
+            this.chLangAddNewAccountLabel.AutoSize = true;
+            this.chLangAddNewAccountLabel.Location = new System.Drawing.Point(461, 21);
+            this.chLangAddNewAccountLabel.Name = "chLangAddNewAccountLabel";
+            this.chLangAddNewAccountLabel.Size = new System.Drawing.Size(189, 25);
+            this.chLangAddNewAccountLabel.TabIndex = 11;
+            this.chLangAddNewAccountLabel.Text = "Change Language";
+            // 
+            // chLangAddNewAccTextBox
+            // 
+            this.chLangAddNewAccTextBox.FormattingEnabled = true;
+            this.chLangAddNewAccTextBox.Items.AddRange(new object[] {
+            "en",
+            "ro"});
+            this.chLangAddNewAccTextBox.Location = new System.Drawing.Point(667, 18);
+            this.chLangAddNewAccTextBox.Name = "chLangAddNewAccTextBox";
+            this.chLangAddNewAccTextBox.Size = new System.Drawing.Size(121, 33);
+            this.chLangAddNewAccTextBox.TabIndex = 12;
+            this.chLangAddNewAccTextBox.SelectedIndexChanged += new System.EventHandler(this.chLangAddNewAccTextBox_SelectedIndexChanged);
+            // 
             // AddNewAccount
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 645);
+            this.Controls.Add(this.chLangAddNewAccTextBox);
+            this.Controls.Add(this.chLangAddNewAccountLabel);
             this.Controls.Add(this.AddAccountBtn);
             this.Controls.Add(this.NewAccountConfirmPasswordTxt);
             this.Controls.Add(this.NewAccountPasswordTxt);
@@ -168,5 +193,7 @@
         private System.Windows.Forms.TextBox NewAccountPasswordTxt;
         private System.Windows.Forms.TextBox NewAccountConfirmPasswordTxt;
         private System.Windows.Forms.Button AddAccountBtn;
+        private System.Windows.Forms.Label chLangAddNewAccountLabel;
+        private System.Windows.Forms.ComboBox chLangAddNewAccTextBox;
     }
 }

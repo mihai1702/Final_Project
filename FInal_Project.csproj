@@ -158,6 +158,9 @@
     <EmbeddedResource Include="AddCategoryForm.resx">
       <DependentUpon>AddCategoryForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="AddCategoryForm.ro.resx">
+      <DependentUpon>AddCategoryForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="AddExistingProduct.resx">
       <DependentUpon>AddExistingProduct.cs</DependentUpon>
     </EmbeddedResource>
@@ -222,6 +225,10 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\XMLcommands\XMLcommands.csproj">
+      <Project>{758df09b-7e8d-4eb8-aa33-f3cad5ed769f}</Project>
+      <Name>XMLcommands</Name>
+    </ProjectReference>
     <ProjectReference Include="Languages\Languages.csproj">
       <Project>{db37eb2e-e71f-4281-baf8-9a437769b127}</Project>
       <Name>Languages</Name>
