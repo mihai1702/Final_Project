@@ -68,6 +68,7 @@ namespace FInal_Project
                     account.Username = Username_txtBox.Text;
                     account.FirstName = FirstName_txtBox.Text;
                     account.LastName = LastName_txtBox.Text;
+                    account.Role = "User";
                     db.Accounts.Add(account);
                     db.SaveChanges();
                     MessageBox.Show("You're all set! Your account has been created successfully.");
