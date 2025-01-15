@@ -55,6 +55,8 @@ namespace FInal_Project
                 {
                     if (account.Username == search)
                     {
+                        Properties.Settings.Default.SavedUsername = UsernameTextBox.Text;
+                        Properties.Settings.Default.Save();
                         found = true;
                         SHA256 sHA256 = SHA256.Create();
                         byte[] input = Encoding.UTF8.GetBytes(PasswordTextBox.Text);

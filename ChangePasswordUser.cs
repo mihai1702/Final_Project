@@ -14,9 +14,11 @@ namespace FInal_Project
 {
     public partial class ChangePasswordUser : Form
     {
+        
         public ChangePasswordUser()
         {
             InitializeComponent();
+            
         }
 
         private void ChangePasswordUser_Load(object sender, EventArgs e)
@@ -35,7 +37,7 @@ namespace FInal_Project
                 sb.Append(b.ToString("x2")); // se transforma fiecare bit in hexa pe 2 caractere - "x2"
             }
             string newpass = sb.ToString();
-            string user = UsernameChangePasswordTxt.Text;
+            //string user = UsernameChangePasswordTxt.Text;
 
             sHA256 = SHA256.Create();
             input = Encoding.UTF8.GetBytes(OldPasswordTxt.Text);
@@ -52,7 +54,7 @@ namespace FInal_Project
                 DbSet<Account> accounts = db.Accounts;
                 foreach (Account account in accounts)
                 {
-                    if (account.Username == user)
+                    if (account.Username == Properties.Settings.Default.SavedUsername)
                     {
                         if (account.Password == oldpass)
                         {
@@ -62,8 +64,7 @@ namespace FInal_Project
                         }
                         else
                         {
-                            MessageBox.Show("Incorrect username or old passowrd! Please try again!");
-                            UsernameChangePasswordTxt.Text = "";
+                            MessageBox.Show("Incorrect old passowrd! Please try again!");
                             OldPasswordTxt.Text = "";
                             NewPasswordTxtBox.Text = "";
                         }

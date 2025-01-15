@@ -306,10 +306,30 @@ namespace FInal_Project
             addNewAccount.Show();
         }
 
+
         private void deleteAccountToolStripMenuItem_Click(object sender, EventArgs e)
         {
             DeleteAccount deleteAccount = new DeleteAccount();
             deleteAccount.Show();
+        }
+
+        private void changePasswordToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ChangePasswordUser changePasswordUser = new ChangePasswordUser();
+            changePasswordUser.Show();
+        }
+
+        private void updateInfoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            UpdateInfoUser updateInfoUser = new UpdateInfoUser();
+            updateInfoUser.Show();
+        }
+
+        private void logOutToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Form1 form2 = new Form1();
+            form2.Show();
+            this.Hide();
         }
     }
 }

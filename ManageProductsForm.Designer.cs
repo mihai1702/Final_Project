@@ -59,6 +59,7 @@
             this.updateInfoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.newAdminToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.newUserToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.logOutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.ProductsGrid)).BeginInit();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -158,7 +159,7 @@
             this.manageUsersToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(1374, 48);
+            this.menuStrip1.Size = new System.Drawing.Size(1374, 42);
             this.menuStrip1.TabIndex = 1;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -223,9 +224,10 @@
             this.addUserToolStripMenuItem,
             this.deleteAccountToolStripMenuItem,
             this.changePasswordToolStripMenuItem,
-            this.updateInfoToolStripMenuItem});
+            this.updateInfoToolStripMenuItem,
+            this.logOutToolStripMenuItem});
             this.manageUsersToolStripMenuItem.Name = "manageUsersToolStripMenuItem";
-            this.manageUsersToolStripMenuItem.Size = new System.Drawing.Size(185, 44);
+            this.manageUsersToolStripMenuItem.Size = new System.Drawing.Size(185, 38);
             this.manageUsersToolStripMenuItem.Text = "Manage Users";
             // 
             // SearchProductBox
@@ -316,12 +318,14 @@
             this.changePasswordToolStripMenuItem.Name = "changePasswordToolStripMenuItem";
             this.changePasswordToolStripMenuItem.Size = new System.Drawing.Size(359, 44);
             this.changePasswordToolStripMenuItem.Text = "Change Password";
+            this.changePasswordToolStripMenuItem.Click += new System.EventHandler(this.changePasswordToolStripMenuItem_Click);
             // 
             // updateInfoToolStripMenuItem
             // 
             this.updateInfoToolStripMenuItem.Name = "updateInfoToolStripMenuItem";
             this.updateInfoToolStripMenuItem.Size = new System.Drawing.Size(359, 44);
             this.updateInfoToolStripMenuItem.Text = "Update Info";
+            this.updateInfoToolStripMenuItem.Click += new System.EventHandler(this.updateInfoToolStripMenuItem_Click);
             // 
             // newAdminToolStripMenuItem
             // 
@@ -336,6 +340,13 @@
             this.newUserToolStripMenuItem.Size = new System.Drawing.Size(359, 44);
             this.newUserToolStripMenuItem.Text = "New User";
             this.newUserToolStripMenuItem.Click += new System.EventHandler(this.newUserToolStripMenuItem_Click);
+            // 
+            // logOutToolStripMenuItem
+            // 
+            this.logOutToolStripMenuItem.Name = "logOutToolStripMenuItem";
+            this.logOutToolStripMenuItem.Size = new System.Drawing.Size(359, 44);
+            this.logOutToolStripMenuItem.Text = "Log Out";
+            this.logOutToolStripMenuItem.Click += new System.EventHandler(this.logOutToolStripMenuItem_Click);
             // 
             // ManageProductsForm
             // 
@@ -395,5 +406,6 @@
         private System.Windows.Forms.ToolStripMenuItem deleteAccountToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem changePasswordToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem updateInfoToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem logOutToolStripMenuItem;
     }
 }
