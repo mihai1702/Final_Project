@@ -56,6 +56,36 @@ namespace FInal_Project
                 }
             });
         }
+
+        public async Task LoadCategoriesAsync()
+        {
+            await Task.Run(() =>
+            {
+                using (ProductDbContext db = new ProductDbContext())
+                {
+                    try
+                    {
+                        db.Database.Connection.Open();
+                        Console.WriteLine("Conexiune reusita");
+                    }
+                    catch (Exception ex)
+                    {
+                        Console.WriteLine(ex.Message);
+                    }
+                    UserProductComboBox.Invoke(new Action(() =>
+                    {
+                        DbSet<Category> categories = db.Categories;
+                        UserProductComboBox.Items.Clear();
+                        foreach (Category category in categories)
+                        {
+                            UserProductComboBox.Items.Add(
+                                category.categoryName
+                                );
+                        }
+                    }));
+                }
+            });
+        }
         private void UserManageProduct_Load(object sender, EventArgs e)
         {
 
@@ -97,6 +127,74 @@ namespace FInal_Project
             Form1 form1 = new Form1();
             form1.Show();
             this.Close();
+        }
+
+        private void UserSearchProductBtn_Click(object sender, EventArgs e)
+        {
+            using (ProductDbContext db = new ProductDbContext())
+            {
+                DbSet<Product> products = db.Products;
+                ProductGridView.Rows.Clear();
+                foreach (Product product in products)
+                {
+                    if (product.ProductName.ToLower().Contains(UserSearchProductTxt.Text.ToLower()))
+                    {
+                        ProductGridView.Rows.Add(
+                        product.ProductID,
+                        product.ProductName,
+                        product.ProductDescription,
+                        product.EnteringDate,
+                        product.ExpDate,
+                        product.Stock,
+                        product.Price
+                        );
+                    }
+                }
+
+            }
+        }
+
+        private void UserRefreshBtn_Click(object sender, EventArgs e)
+        {
+            LoadProductsAsync();
+            UserProductComboBox.Text = "";
+            LoadCategoriesAsync();
+        }
+
+        private void UserProductComboBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            LoadProductsBasedOnCategory();
+        }
+
+        public void LoadProductsBasedOnCategory()
+        {
+            using (ProductDbContext db = new ProductDbContext())
+            {
+                DbSet<Product> products = db.Products;
+                DbSet<Category> categories = db.Categories;
+                ProductGridView.Rows.Clear();
+                foreach (Category category in categories)
+                {
+                    if (UserProductComboBox.Text.Equals(category.categoryName))
+                    {
+                        foreach (Product product in products)
+                        {
+                            if (category.categoryID == product.CategoryID)
+                            {
+                                ProductGridView.Rows.Add(
+                                    product.ProductID,
+                                    product.ProductName,
+                                    product.ProductDescription,
+                                    product.EnteringDate,
+                                    product.ExpDate,
+                                    product.Stock,
+                                    product.Price
+                                );
+                            }
+                        }
+                    }
+                }
+            }
         }
     }
 }

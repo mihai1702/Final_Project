@@ -284,5 +284,26 @@ namespace FInal_Project
             deleteCategory.Show();
             this.Hide();
         }
+
+        private void ManageProductsForm_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void newAdminToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            OpenAddAccount("Admin");
+        }
+
+        private void newUserToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            OpenAddAccount("User");
+        }
+
+        private void OpenAddAccount(string role)
+        {
+            AddNewAccount addNewAccount = new AddNewAccount(role);
+            addNewAccount.Show();
+        }
     }
 }
