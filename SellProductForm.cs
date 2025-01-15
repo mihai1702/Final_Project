@@ -24,5 +24,10 @@ namespace FInal_Project
             Console.WriteLine("cantitatea hshs" + " " + quantity);
             this.Close();
         }
+
+        private void SellProductForm_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

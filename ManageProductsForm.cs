@@ -305,5 +305,11 @@ namespace FInal_Project
             AddNewAccount addNewAccount = new AddNewAccount(role);
             addNewAccount.Show();
         }
+
+        private void deleteAccountToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            DeleteAccount deleteAccount = new DeleteAccount();
+            deleteAccount.Show();
+        }
     }
 }

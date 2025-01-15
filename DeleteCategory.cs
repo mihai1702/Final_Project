@@ -47,5 +47,10 @@ namespace FInal_Project
                 }
             }
         }
+
+        private void DeleteCategory_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

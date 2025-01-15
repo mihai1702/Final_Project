@@ -59,6 +59,7 @@
             this.Controls.Add(this.SellNumericUpDown);
             this.Name = "SellProductForm";
             this.Text = "SellProductForm";
+            this.Load += new System.EventHandler(this.SellProductForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.SellNumericUpDown)).EndInit();
             this.ResumeLayout(false);
 

@@ -158,7 +158,7 @@
             this.manageUsersToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(1374, 42);
+            this.menuStrip1.Size = new System.Drawing.Size(1374, 48);
             this.menuStrip1.TabIndex = 1;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -225,7 +225,7 @@
             this.changePasswordToolStripMenuItem,
             this.updateInfoToolStripMenuItem});
             this.manageUsersToolStripMenuItem.Name = "manageUsersToolStripMenuItem";
-            this.manageUsersToolStripMenuItem.Size = new System.Drawing.Size(185, 38);
+            this.manageUsersToolStripMenuItem.Size = new System.Drawing.Size(185, 44);
             this.manageUsersToolStripMenuItem.Text = "Manage Users";
             // 
             // SearchProductBox
@@ -309,6 +309,7 @@
             this.deleteAccountToolStripMenuItem.Name = "deleteAccountToolStripMenuItem";
             this.deleteAccountToolStripMenuItem.Size = new System.Drawing.Size(359, 44);
             this.deleteAccountToolStripMenuItem.Text = "Delete Account";
+            this.deleteAccountToolStripMenuItem.Click += new System.EventHandler(this.deleteAccountToolStripMenuItem_Click);
             // 
             // changePasswordToolStripMenuItem
             // 
